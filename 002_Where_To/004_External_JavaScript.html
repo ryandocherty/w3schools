@@ -1,0 +1,113 @@
+<!-- 
+    External JavaScript
+
+    Scripts can also be placed in external files
+    External scripts are practical when the same code is used in many different web pages
+
+    Placing scripts in external files has some advantages:
+        1. It separates HTML and code
+        2. It makes HTML and JavaScript easier to read and maintain
+        3.Cached JavaScript files can speed up page loads
+
+    JavaScript files have the file extension .js
+    To use an external script, put the name of the script file in the src (source) attribute of a <script> tag:
+-->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Demo External JavaScript</h2>
+
+    <p id="demo">A Paragraph.</p>
+
+    <button type="button" onclick="myFunction()">Try it</button>
+
+    <p>This example links to "myScript.js".</p>
+    <p>(myFunction is stored in "myScript.js")</p>
+
+    <script src="myScript.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+<!-- 
+    External References
+    
+    An external script can be referenced in 3 different ways:
+        1. With a full URL (a full web address)
+        2. With a file path (like /js/)
+        3. Without any path
+-->
+
+
+<!-- This example uses a full URL to link to myScript.js: -->
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>External JavaScript</h2>
+
+    <p id="demo">A Paragraph.</p>
+
+    <button type="button" onclick="myFunction()">Click Me</button>
+
+    <p>This example uses a full web URL to link to "myScript.js".</p>
+    <p>(myFunction is stored in "myScript.js")</p>
+
+    <script src="https://www.w3schools.com/js/myScript.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- This example uses a file path to link to myScript.js: -->
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>External JavaScript</h2>
+
+    <p id="demo">A Paragraph.</p>
+
+    <button type="button" onclick="myFunction()">Try it</button>
+
+    <p>This example uses a file path to link to "myScript.js".</p>
+    <p>(myFunction is stored in "myScript.js")</p>
+
+    <script src="/js/myScript.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- This example uses no path to link to myScript.js: -->
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Demo External JavaScript</h2>
+
+    <p id="demo">A Paragraph.</p>
+
+    <button type="button" onclick="myFunction()">Try it</button>
+
+    <p>This example links to "myScript.js".</p>
+    <p>(myFunction is stored in "myScript.js")</p>
+
+    <script src="myScript.js"></script>
+
+</body>
+
+</html>
