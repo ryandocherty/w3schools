@@ -1,4 +1,4 @@
-//JavaScript Code Blocks
+//----------JavaScript Code Blocks----------
 
 //JavaScript statements can be grouped together in code blocks, inside curly brackets {...}
 //The purpose of code blocks is to define statements to be executed together

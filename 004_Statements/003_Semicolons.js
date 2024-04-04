@@ -1,4 +1,4 @@
-//----------Semicolons ;----------
+//----------Semicolons----------
 
 //Semicolons separate JavaScript statements
 //Add a semicolon at the end of each executable statement:
