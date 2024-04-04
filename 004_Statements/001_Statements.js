@@ -22,5 +22,5 @@ function valueOfZ_Function(){
 //This statement tells the browser to write "Hello Dolly." inside an HTML element with id="demo":
 
 function writeHelloDolly_Function(){
-    document.getElementById("demo1").innerHTML = "Paragraph Changed";
+    document.getElementById("demo1").innerHTML = "Hello Dolly";
 }
