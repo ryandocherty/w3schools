@@ -9,8 +9,7 @@ y = 6;        // Statement 3
 z = x + y;    // Statement 4
 
 function valueOfZ_Function(){
-    document.getElementById("demo").innerHTML =
-            "The sum of " + x + " and " + y + " is " + z + ".";
+    document.getElementById("demo").innerHTML = "The sum of " + x + " and " + y + " is " + z + ".";
 }
 
 
