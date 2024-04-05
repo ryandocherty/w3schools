@@ -39,4 +39,3 @@ let f = d + e;
 const g = 5;
 const h = 6;
 const i = g + i;
-

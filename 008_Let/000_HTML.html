@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:#000000; font-family: Helvetica;" >
+
+    <!--------------------Statements-------------------->
+    <h1 style="color:#ffffff;">JavaScript Let & Var</h1>
+    <h2 style="color:#ffffff;">Redeclaring a Variable Using var</h2>
+
+    <p id="myParagraph1" style="color:#ffffff;">Value of var x before redeclaration:</p>
+    <p id="myParagraph2" style="color:#ffffff;">Value of var x after redeclaration:</p>
+
+    <button type="button" onclick="printVarBeforeRedeclaration_Function()">Print Var 'x' before redeclaration</button>
+    <button type="button" onclick="printVarAfterRedeclaration_Function()">Print Var 'x' after redeclaration</button>
+
+
+    <p>&nbsp;</p>
+
+
+    <h1 style="color:#ffffff;">JavaScript Let Hoisting</h1>
+    <h2 style="color:#ffffff;">Redeclaring a Variable Using let</h2>
+
+    <p id="myErrorParagraph" style="color:#ffffff;">With <b>let</b>, you cannot use a variable before it is declared.</p>
+    <p id="myErrorParagraph2" style="color:#ffffff;">carName2</p>
+
+    <button type="button" onclick="printReferenceError_Function()">Print ReferenceError</button>
+
+
+
+
+    <!--------------------Scripts-------------------->
+    <script src="002_Redeclaring_variables.js"></script>
+    <script src="003_Let_Hoisting.js"></script>
+
+
+</body>
+
+</html>
