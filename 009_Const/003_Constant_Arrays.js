@@ -26,13 +26,11 @@ function printCarsArray_Function(){
     }
 }
 
+
 function printUpdatedCarsArray_Function(){
-    // You can change an element:
-    cars[0] = "Toyota";
-
-    // You can add an element:
-    cars.push("Audi");
-
+    
+    cars[0] = "Toyota";     // You can change an element
+    cars.push("Audi");      // You can add an element
 
     for (i = 0; i < cars.length; i++){
         document.getElementById("myUpdatedCarsArray").innerHTML += (i + 1) + ": " + cars[i] + ". ";
@@ -43,8 +41,8 @@ function printUpdatedCarsArray_Function(){
 //But you can NOT reassign the array:
 function reassignArrayError_Function(){
     try{
-        const cars2 = ["Saab", "Volvo", "BMW"];
-        cars2 = ["Toyota", "Nissan", "Audi"];
+        const cars = ["Saab", "Volvo", "BMW"];
+        cars = ["Toyota", "Nissan", "Audi"];
     }
 
     catch (errorMessage){
