@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:#000000; font-family: Helvetica;" >
+
+    <!--------------------Statements-------------------->
+    <h1 style="color:#ffffff;">JavaScript const</h1>
+    <p>&nbsp;</p>
+    <h2 style="color:#ffffff;">Const Cannot be Reassigned</h2>
+    <h3 style="color:#ffffff;">A variable defined with the const keyword cannot be reassigned:</h3>
+
+    <p id="myConstError" style="color:#ffffff;">Reassigning a const</p>
+
+    <button type="button" onclick="reassigningConst_Function()">Reassign const</button>
+    
+
+
+    <p>&nbsp;</p>
+
+
+
+    <h2 style="color:#ffffff;">Constant Objects and Arrays</h3>
+    <h3 style="color:#ffffff;">Declaring a constant array does NOT make the elements unchangeable:</h3>
+
+    <p id="myCarsArray" style="color:#ffffff;">Cars Array: </p>
+    <p id="myUpdatedCarsArray" style="color:#ffffff;">Updated Cars Array: </p>
+    
+    <button type="button" onclick="printCarsArray_Function()">Print Cars array</button>
+    <button type="button" onclick="printUpdatedCarsArray_Function()">Update Cars array</button>
+
+
+
+    <h3 style="color:#ffffff;">But you can NOT reassign a constant array:</h3>
+
+    <p id="myReassignCarsArray" style="color:#ffffff;">Reassign Cars array</p>
+
+    <button type="button" onclick="reassignArrayError_Function()">Reassign Cars array</button>
+    
+
+
+
+
+    <!--------------------Scripts-------------------->
+    <script src="001_Const_Cannot_Be_Reassigned.js"></script>
+    <script src="003_Constant_Objects_and_Arrays.js"></script>
+   
+
+
+</body>
+
+</html>
