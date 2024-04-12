@@ -19,9 +19,9 @@
 
 // You can create a const object:
 const car = {
-    type:"Fiat", 
-    model:"500", 
-    color:"white"
+    type: "Fiat", 
+    model: "500", 
+    color: "white"
 }
 
 function printCarObject_Function() {
@@ -30,7 +30,7 @@ function printCarObject_Function() {
 
 
 function printUpdatedObject_Function(){
-    
+
     car.color = "red";      // You can change a property
     car.owner = "Johnson";  // You can add a property
 
