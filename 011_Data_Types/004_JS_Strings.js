@@ -24,7 +24,6 @@ function quotesFunction_Function(){
     answer1 + "<br>" + 
     answer2 + "<br>" +
     answer3;
-
 }
 
 

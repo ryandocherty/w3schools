@@ -4,13 +4,13 @@
 
 function dynamicDataTypes_Function(){
     let x;          //now x is undefined
-    document.getElementById("myChangeDataType").innerHTML = 'let x; |   x is: ' + x;
+    document.getElementById("myChangeDataType").innerHTML = 'let x;' + '<br>' + 'x is: ' + x;
 
     x = 5;          //now x is a number
-    document.getElementById("myChangeDataType2").innerHTML = 'x = 5; |   x is: ' + x;
+    document.getElementById("myChangeDataType2").innerHTML = 'x = 5;' + '<br>' + 'x is: ' + x;
 
     x = "John";     //now x is a string
-    document.getElementById("myChangeDataType3").innerHTML = 'x = "John"; |   x is: ' + x;
+    document.getElementById("myChangeDataType3").innerHTML = 'x = "John";' + '<br>' + 'x is: ' + x;
 }
 
 
