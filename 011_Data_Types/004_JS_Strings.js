@@ -24,9 +24,7 @@ function quotesFunction_Function(){
     answer1 + "<br>" + 
     answer2 + "<br>" +
     answer3;
-}
 
-
-function callAllFunctions_004_Function(){
-    quotesFunction_Function();
+    document.getElementById("myQuotes_Info").innerHTML = 
+    "You can use quotes inside a string, as long as they don't match the quotes surrounding the string.";
 }
