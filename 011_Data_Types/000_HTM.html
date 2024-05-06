@@ -7,7 +7,9 @@
     <h1 style="color:#ffffff;">JavaScript Data Types</h1>
 
 
+
     <p>&nbsp;</p>
+
 
 
     <h2 style="color:#ffffff;">The Concept of Data Types</h2>
@@ -24,7 +26,9 @@
     <button type="button" onclick="callAllFunctions_002_Function()">Add Numbers to Strings</button>
     
 
+
     <p>&nbsp;</p>
+
 
 
     <h2 style="color:#ffffff;">JavaScript Types are Dynamic</h2>
@@ -102,7 +106,7 @@
 
 
     <h2 style="color:#ffffff;">JavaScript Arrays</h2>
-    <h4 style="color:#ffffff;">JavaScript arrays are written with square brackets.</h4>
+    <h4 style="color:#ffffff;">JavaScript arrays are written with square brackets [ ].</h4>
     <h4 style="color:#ffffff;">Array items are separated by commas.</h4>
     <h4 style="color:#ffffff;">The following code declares (creates) an array called cars, containing three items (car names):</h4>
 
@@ -113,6 +117,73 @@
 
 
 
+    <p>&nbsp;</p>
+
+
+
+    <h2 style="color:#ffffff;">JavaScript Objects</h2>
+    <h4 style="color:#ffffff;">JavaScript objects are written with curly braces { }.</h4>
+    <h4 style="color:#ffffff;">Object properties are written as name:value pairs, separated by commas.</h4>
+    <h4 style="color:#ffffff;">The object (person) in this example has 4 properties: firstName, lastName, age, and eyeColor:</h4>
+
+    <p id="myPersonObject" style="color:#74B72E;"></p>
+
+    <button type="button" onclick="personObject_Function()">Print 'Person' Object</button>
+
+
+
+    <p>&nbsp;</p>
+
+
+
+    <h2 style="color:#ffffff;">The typeof Operator</h2>
+    <h4 style="color:#ffffff;">You can use the JavaScript typeof operator to find the type of a JavaScript variable.</h4>
+    <h4 style="color:#ffffff;">The typeof operator returns the type of a variable or an expression:</h4>
+
+    <p id="myTypeOf" style="color:#74B72E;"></p>
+
+    <button type="button" onclick="typeof_Function()">Print 'Person' Object</button>
+
+
+
+    <p>&nbsp;</p>
+
+
+
+    <h2 style="color:#ffffff;">Undefined</h2>
+    <h4 style="color:#ffffff;">In JavaScript, a variable without a value, has the value <b>undefined</b>. The type is also <b>undefined</b>.</h4>
+
+    <p id="myUndefined" style="color:#74B72E;"></p>
+    <h5 id="myUndefined_Info" style="color:#ffffff;"></h5>
+
+    <button type="button" onclick="printUndefined_Function()">Print Undefined</button>
+
+
+    <h4 style="color:#ffffff;">Any variable can be emptied, by setting the value to <b>undefined</b>. The type will also be <b>undefined</b>.</h4>
+
+    <p id="myEmptyVariable" style="color:#74B72E;"></p>
+    <h5 id="myEmptyVariable_Info" style="color:#ffffff;"></h5>
+
+    <button type="button" onclick="printEmptyVariable_Function()">Empty Variable 'car'</button>
+
+
+
+    <p>&nbsp;</p>
+
+
+
+    <h2 style="color:#ffffff;">Empty Values</h2>
+    <h4 style="color:#ffffff;">An empty value has nothing to do with <b>undefined</b>.</h4>
+    <h4 style="color:#ffffff;">An empty string has both a legal value and a type.</h4>
+
+    <p id="myEmptyValue" style="color:#74B72E;"></p>
+
+    <button type="button" onclick="printEmptyValue_Function()">Print Empty Value</button>
+
+
+    
+    <p>&nbsp;</p>
+
 
 
     <!--------------------Scripts-------------------->
@@ -121,6 +192,11 @@
     <script src="004_JS_Strings.js"></script>
     <script src="005_JS_Numbers.js"></script>
     <script src="006_JS_Booleans.js"></script>
+    <script src="007_JS_Arrays.js"></script>
+    <script src="008_JS_Objects.js"></script>
+    <script src="009_typeof_Operator.js"></script>
+    <script src="010_Undefined.js"></script>
+    <script src="011_Empty_Values.js"></script>
 
 
 
