@@ -22,6 +22,21 @@ function name(parameter1, parameter2, parameter3) {
 
 
 
+function printExampleFunction_Function(){
+
+    document.getElementById("myExampleFunction").innerHTML =
+    'function name(parameter1, parameter2, parameter3){' + '<br>' +
+    '&nbsp &nbsp // code to be executed' + '<br>' +
+    '}' + '<br>';
+
+    document.getElementById("myExampleFunction_Info").innerHTML =
+    'Function <b>parameters</b> are listed inside the parentheses ( ) in the function definition.' + '<br>' +
+    'Function <b>arguments</b> are the <b>values</b> received by the function when it is invoked.' + '<br>' +
+    'Inside the function, the arguments (the parameters) behave as local variables.';
+}
+
+
+
 
 //----------Function Invocation----------
 
