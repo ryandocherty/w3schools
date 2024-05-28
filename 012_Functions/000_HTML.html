@@ -49,9 +49,10 @@
     <h4 style="color:#ffffff;">If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.</h4>
     <h4 style="color:#ffffff;">Functions often compute a return value. The <b>return value</b> is "returned" back to the "caller":</h4>
 
-    <p id="myReturnFunction" style="color:#74B72E;"></p>
+    <p id="myPrintReturnFunction" style="color:#74B72E;"></p>
+    <h5 id="myPrintReturnFunction_Info" style="color:#ffffff;"></h5>
 
-    <button type="button" onclick="returnMultipleTwoNumbers_Function()">Print Return</button>
+    <button type="button" onclick="printMultipleTwoNumbers_Function()">Print Return</button>
 
 
 
@@ -59,8 +60,49 @@
 
 
 
+    <h2 style="color:#ffffff;">The ( ) Operator</h2>
+    <h4 style="color:#ffffff;">The ( ) operator invokes (calls) the function</h4>
+    <h4 style="color:#ffffff;">Function to convert Fahrenheit to Celsius:</h4>
+
+    <p id="myCelciusFunction" style="color:#74B72E;"></p>
+
+    <button type="button" onclick="printFahrenheitToCelcius_Function()">Print Celcius Value</button>
 
 
+    <h4 style="color:#ffffff;">Accessing a function with incorrect parameters can return an incorrect answer:</h4>
+    <p id="myCelciusFunction_IncorrectParameters" style="color:#74B72E;"></p>
+    <button type="button" onclick="printCelciusValue_IncorrectParameters_Function()">Print Celcius Value</button>
+
+    <h4 style="color:#ffffff;">Accessing a function without ( ) returns the function and not the function result:</h4>
+    <p id="myCelciusFunction_NoParameters" style="color:#74B72E;"></p>
+    <h5 id="myCelciusFunction_Info" style="color:#ffffff;"></h5>
+    <button type="button" onclick="printCelciusValue_NoParameters_Function()">Print Celcius Value</button>
+
+
+    <p>&nbsp;</p>
+
+
+
+    <h2 style="color:#ffffff;">Functions Used as Variable Values</h2>
+    <h4 style="color:#ffffff;">Functions can be used the same way as you use variables, in all types of formulas, assignments, and calculations.</h4>
+    <h4 style="color:#ffffff;">Instead of using a variable to store the return value of a function, you can use the function directly, as a variable value:</h4>
+
+    <p id="myCelciusFunction_FunctionAsVariableValue" style="color:#74B72E;"></p>
+    <button type="button" onclick="printCelciusValue_FunctionAsVariableValue_Function()">Print Celcius Value</button>
+
+
+
+    <p>&nbsp;</p>
+
+
+
+    <h2 style="color:#ffffff;">Local Variables</h2>
+    <h4 style="color:#ffffff;">Variables declared within a JavaScript function, become LOCAL to the function.</h4>
+    <h4 style="color:#ffffff;">Local variables can only be accessed from within the function.</h4>
+
+    <p id="myLocalVariable" style="color:#74B72E;"></p>
+    <p id="myLocalVariable2" style="color:#74B72E;"></p>
+    <button type="button" onclick="callAllFunctions_005_Function()">Print Variable</button>
 
 
 
@@ -68,6 +110,8 @@
     <script src="001_JS_Functions.js"></script>
     <script src="002_JS_Function_Syntax.js"></script>
     <script src="003_JS_Function_Return.js"></script>
+    <script src="004_The_()_Operator.js"></script>
+    <script src="005_Local_Variables.js"></script>
     
    
 

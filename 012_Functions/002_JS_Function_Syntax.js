@@ -12,7 +12,7 @@
 //The code to be executed, by the function, is placed inside curly brackets: {}
 
 function name(parameter1, parameter2, parameter3) {
-    // code to be executed
+    //code to be executed
 }
 
 
