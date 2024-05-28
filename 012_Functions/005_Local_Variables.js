@@ -18,19 +18,23 @@ function myFunction(){
 
 
 function carName_InsideFunction(){
-    let carName_Volvo = "Volvo";
-    let text_insideFunction = "Inside function: " + typeof carName_Volvo + " " + carName_Volvo;
+    let carName = "Volvo";
 
-    document.getElementById("myLocalVariable").innerHTML = text_insideFunction;
+    document.getElementById("myLocalInsideVariable").innerHTML =
+    'let carName = "Volvo";' + '<br>' + '<br>' +
+    "Inside function: " + carName + ", " + typeof carName;
 }
 
 
-
-let carName_BMW = "BMW";
-
-function carName_OutsideFunction(){
-    let text_outsideFunction = "Outside function: " + typeof carName_BMW + " " + carName_BMW;
-    document.getElementById("myLocalVariable2").innerHTML = text_outsideFunction;
+function carName_OutsideFunction() {
+    try{
+        typeof carName + " " + carName;
+    }
+    
+    catch (undefinedError){
+        document.getElementById("myLocalOutsideVariable").innerHTML =
+        "Outside function: " + undefinedError;
+    }
 }
 
 

@@ -62,5 +62,8 @@ function printCelciusValue_NoParameters_Function(){
 
 function printCelciusValue_FunctionAsVariableValue_Function(){
     document.getElementById("myCelciusFunction_FunctionAsVariableValue").innerHTML =
-    'The temperature is ' + fahrenheitToCelcius(89) + " degrees celcius"
+    '"The temperature is " + fahrenheitToCelcius(100) + " degrees celcius;"' + '<br>' + '<br>' +
+
+    //Here we use the function directly as a variable value:
+    'The temperature is ' + fahrenheitToCelcius(100) + ' degrees celcius';
 }
