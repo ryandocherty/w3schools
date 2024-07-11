@@ -16,7 +16,6 @@ function myFunction(){
 
 
 
-
 function carName_InsideFunction(){
     let carName = "Volvo";
 
@@ -25,8 +24,7 @@ function carName_InsideFunction(){
     "Inside function: " + carName + ", " + typeof carName;
 }
 
-
-function carName_OutsideFunction() {
+function carName_OutsideFunction(){
     try{
         typeof carName + " " + carName;
     }
@@ -36,7 +34,6 @@ function carName_OutsideFunction() {
         "Outside function: " + undefinedError;
     }
 }
-
 
 
 function callAllFunctions_005_Function(){
