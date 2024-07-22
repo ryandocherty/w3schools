@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:#000000; color:#ffffff; font-family: Helvetica;" >
+
+    <!--------------------Statements-------------------->
+    <h1>JavaScript Object Properties</h1>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>An Object is an Unordered Collection of Properties</h2>
+    <h4>Properties are the most important part of JavaScript objects.</h4>
+    <h4>Properties can be changed, added, deleted, and some are read only.</h4>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Accessing JavaScript Properties</h2>
+    <h4>The syntax for accessing the property of an object is:</h4>
+    <p style="color:#74B72E;">let age = person.age; &nbsp &nbsp &nbsp &nbsp &nbsp //objectName.property</p>
+    <p style="color:#74B72E;">let age = person["age"]; &nbsp &nbsp &nbsp //objectName["property"]</p>
+    <p style="color:#74B72E;">let age = person[x]; &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp //objectName[expression]</p>
+
+    <p id="myPrintObjectAccessing" style="color:#74B72E;"></p>
+    <button type="button" onclick="printObjectAccessing_Function()">Print object accessing examples</button>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Adding and Deleting Properties</h2>
+    <h4>You can add new properties to an existing object by simply giving it a value</h4>
+    <h4>The <span style="color:#74B72E">delete</span> keyword deletes a property from an object:</h4>
+
+    <p id="myPrintAddingDeleting" style="color:#74B72E;"></p>
+    <button type="button" onclick="printAddingDeleting_Function()">Print updated person object</button>
+
+    <h3>Note:</h3>
+    <h4>The <span style="color:#74B72E">delete</span> keyword deletes both the value of the property and the property itself.</h4>
+    <h4>After deletion, the property cannot be used before it is added back again.</h4>
+    
+
+    <p>&nbsp;</p>
+
+
+    <h2>Nested Objects</h2>
+    <h4>Property values in an object can be other objects:</h4>
+
+    <p id="myNestedObjectExample" style="color:#74B72E;"></p>
+    <button type="button" onclick="printNestedObjectExample()">Print nested object example</button>
+
+    <h4>You can access nested objects using the dot notation or the bracket notation:</h4>
+
+    <p id="myNestedObjectAccessing" style="color:#74B72E;"></p>
+    <button type="button" onclick="printNestedObjectAccessing()">Print nested object accessing</button>
+
+   
+    <p>&nbsp;</p>
+
+
+    <!--------------------Scripts-------------------->
+    <script src="001_Accessing_Adding_Deleting_Properties.js"></script>
+    <script src="002_Nested_Objects.js"></script>
+   
+    
+</body>
+
+</html>
