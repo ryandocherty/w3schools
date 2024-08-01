@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:#000000; color:#ffffff; font-family: Helvetica;" >
+
+    <!--------------------Statements-------------------->
+    <h1>JavaScript Object Methods</h1>
+
+
+    <p>&nbsp;</p>
+
+
+    <h4><span style="color:#FF0000">Object methods</span> are actions that can be performed on objects.</h4>
+    <h4>A method is a <span style="color:#FF0000">function definition</span> stored as a 
+        <span style="color:#FF0000">property value</span>.</h4>
+
+
+    <table style="width:40%">
+        <tr>
+            <th style="text-align:left">Property</th>
+            <th style="text-align:left">Value</th>
+        </tr>
+        <tr>
+            <td>firstName</td>
+            <td>John</td>
+        </tr>
+        <tr>
+            <td>lastName</td>
+            <td>Doe</td>
+        </tr>
+        <tr>
+            <td>age</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>eyeColor</td>
+            <td>blue</td>
+        </tr>
+        <tr>
+            <td>fullName</td>
+            <td>function() {return this.firstName + " " + this.lastName;}</td>
+        </tr>
+    </table>
+
+    <p id="myPrintPersonObject" style="color:#74B72E;"></p>
+    <button type="button" onclick="printPersonObjectWithMethod_Function()">Print personObject</button>
+
+
+    <h4>In the example above, <span style="color:#FF0000">this</span> refers to the 
+        <span style="color:#FF0000">person object</span>:</h4>
+    <h4><span style="color:#FF0000">this.firstName</span> means the 
+        <span style="color:#FF0000">firstName</span> property of 
+        <span style="color:#FF0000">person</span>.</h4>
+    <h4><span style="color:#FF0000">this.lastName</span> means the 
+        <span style="color:#FF0000">lastName</span> property of 
+        <span style="color:#FF0000">person</span>.
+    </h4>
+
+
+    <p>&nbsp;</p>
+
+
+
+    <h2>Accessing Object Methods</h2>
+    <h4>You access an object method with the following syntax:</h4>
+    <h4><span style="color:#74B72E">objectName.methodName()</span></h4>
+    <h4>If you invoke the <span style="color:#FF0000">fullName property</span> with (), it will execute as a 
+        <span style="color:#FF0000">function</span>:</h4>
+    <h4><span style="color:#74B72E">name = person.fullName();</span></h4>
+
+    <p id="myPrintFullNameAsFunction" style="color:#74B72E;"></p>
+    <button type="button" onclick="printPersonObject_fullNameAsFunction()">Execute as function</button>
+
+
+    <h4>If you access the <span style="color:#FF0000">fullName peroperty</span> without (), it will return the 
+        <span style="color:#FF0000">function definition</span>:</h4>
+    <h4><span style="color:#74B72E">name = person.fullName;</span></h4>
+
+    <p id="myPrintFullNameAsFunctionDefinition" style="color:#74B72E;"></p>
+    <button type="button" onclick="printPersonObject_fullNameAsFunctionDefinition()">Execute as function definition</button>
+
+
+
+    <p>&nbsp;</p>
+
+
+    <!--------------------Scripts-------------------->
+    <script src="001_Object_Methods.js"></script>
+    
+   
+    
+</body>
+
+</html>
