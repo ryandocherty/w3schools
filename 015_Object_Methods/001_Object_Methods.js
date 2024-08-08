@@ -1,4 +1,4 @@
-//----JavaScript Object Methods----
+//--------JavaScript Object Methods--------
 
 
 
@@ -30,6 +30,28 @@ let personObject_fullNameAsFunctionDefinition = personObjectWithMethod.fullName;
 
 
 
+//----Adding a Method to an Object----
+
+//Adding a new method to an object is easy:
+const personObjectAddMethod = {
+    firstName: "Castro",
+    lastName: "Saint",
+    id: 23,
+};
+
+//Add a method
+personObjectAddMethod.fullName = function(){
+    return this.firstName + " " + this.lastName;
+};
+
+
+
+//----Using JavaScript Methods----
+
+//This example uses the JavaScript toUpperCase() method to convert a text to uppercase:
+personObjectAddMethod.fullNameUppercase = function(){
+    return (this.firstName + " " + this.lastName).toUpperCase();
+};
 
 
 
@@ -37,10 +59,8 @@ let personObject_fullNameAsFunctionDefinition = personObjectWithMethod.fullName;
 
 
 
-
-//----print functions----
-//IDEA - could I have these print functions in a switch case statement?
-
+//--------print functions--------
+//Idea - could I have these print functions in a switch case statement?
 
 function printPersonObjectWithMethod_Function(){
     document.getElementById("myPrintPersonObject").innerHTML = 
@@ -51,9 +71,20 @@ function printPersonObjectWithMethod_Function(){
 function printPersonObject_fullNameAsFunction(){
     document.getElementById("myPrintFullNameAsFunction").innerHTML =
     'fullName = ' + personObject_fullNameAsFunction;
-}
+};
 
 function printPersonObject_fullNameAsFunctionDefinition(){
     document.getElementById("myPrintFullNameAsFunctionDefinition").innerHTML =
     'fullName = ' + personObject_fullNameAsFunctionDefinition;
-}
+};
+
+function printPersonObject_AddMethod(){
+    document.getElementById("myPrintAddMethod").innerHTML =
+    JSON.stringify(personObjectAddMethod) + '<br>' +
+    'Full name: ' + personObjectAddMethod.fullName();
+};
+
+function printToUppercase(){
+    document.getElementById("myPrintToUppercase").innerHTML =
+    JSON.stringify(personObjectAddMethod.fullNameUppercase());
+};
