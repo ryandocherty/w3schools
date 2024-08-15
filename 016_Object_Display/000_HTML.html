@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:#000000; color:#ffffff; font-family: Helvetica;" >
+
+    <!--------------------Statements-------------------->
+    <h1>JavaScript Display Objects</h1>
+
+    <h4>Some solutions to display JavaScript objects are: </h4>
+    <h4>• Displaying the Object Properties by name</h4>
+    <h4>• Displaying the Object Properties in a Loop</h4>
+    <h4>• Displaying the Object using Object.values()</h4>
+    <h4>• Displaying the Object using JSON.stringify()</h4>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>How to Display JavaScript Objects?</h2>
+    <h4>Displaying a JavaScript object will output <span style="color:#FF0000">[object Object]</span>.</h4>
+
+    <p id="myPrintPersonObjectSimpleDisplay" style="color:#74B72E;"></p>
+    <button type="button" onclick="personObject_SimpleDisplay.print_personObject_SimpleDisplay()">Print personObject (simple)</button>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Displaying Object Properties in a String</h2>
+    <h4>The properties of an object can be displayed as a string:</h4>
+
+    <p id="myPrintPersonObjectStringDisplay" style="color:#74B72E;"></p>
+    <button type="button" onclick="personObject_StringDisplay.print_personObject_StringDisplay()">Print personObject (as string)</button>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Displaying Properties in a Loop</h2>
+    <h4>The properties of an object can be collected in a loop:</h4>
+
+    <p id="myPrintPersonObjectLoopDisplay" style="color:#74B72E;"></p>
+    <button type="button" onclick="personObject_LoopDisplay.print_personObject_LoopDisplay()">Print personObject (loop)</button>
+
+
+
+    <p>&nbsp;</p>
+
+
+
+    <h2>Displaying Properties Using Object.values()</h2>
+    <h4><span style="color:#74B72E">Object.values()</span> creates an array from the property values:</h4>
+
+    <p id="myPrintPersonObjectValues" style="color:#74B72E"></p>
+    <button type="button" onclick="personObject_ObjectValues.print_personObject_ObjectValues()">Print personObject (Object.values)</button>
+
+
+
+    <p>&nbsp;</p>
+
+
+
+    <h2>Displaying Properties Using Object.entries()</h2>
+    <h4><span style="color:#74B72E">Object.entries()</span> makes it simple to use objects in loops:</h4>
+
+    <p id="myPrintPersonObjectEntries" style="color:#74B72E"></p>
+    <button type="button" onclick="fruitsObject_ObjectEntries.print_fruitsObject_ObjectEntries()">Print personObject (Object.entries)</button>
+
+
+
+    <p>&nbsp;</p>
+
+
+
+    <h2>Displaying Properties Using Using JSON.stringify()</h2>
+    <h4>JavaScript objects can be converted to a string with JSON method <span style="color:#74B72E">JSON.stringify()</span>.</h4>
+    <h4><span style="color:#74B72E">JSON.stringify()</span> is included in JavaScript and supported in all major browsers.</h4>
+    <h5>Note: The result will be a string written in JSON notation</h5>
+
+
+    <p id="myPrintPersonJSONstringify" style="color:#74B72E"></p>
+    <button type="button" onclick="personObject_JSONstringify.print_personObject_JSONstringify()">Print personObject (Object.entries)</button>
+
+
+
+    <p>&nbsp;</p>
+
+    <!--------------------Scripts-------------------->
+    <script src="001_How_To_Display_Objects.js"></script>
+    
+   
+    
+</body>
+
+</html>
