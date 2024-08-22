@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:#000000; color:#ffffff; font-family: Helvetica;" >
+
+    <!--------------------Statements-------------------->
+    <h1>JavaScript Object Constructors</h1>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Object Constructor Functions</h2>
+    <h4>Sometimes we need to create many objects of the same <span style="color:#FF0000">type</span>.</h4>
+    <h4>To create an <span style="color:#FF0000">object type</span> we use an 
+        <span style="color:#FF0000">object constructor function</span>.</h4>
+    <h4>It is considered good practice to name constructor functions with an upper-case first letter.</h4>
+
+    <p id="myPrintPersonConstructor" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_PersonConstructor()">Print PersonConstructor</button>
+
+    <h3>Note:</h3>
+    <h4>In the constructor function, <span style="color:#FF0000">this</span> has no value.</h4>
+    <h4>The value of <span style="color:#FF0000">this</span> will become the new object when a new object is created.</h4>
+    <h4>Now we can use <span style="color:#74B72E">new Person()</span> to create many new Person objects:</h4>
+
+    <p id="myPrintPersonConstructorObjects" style="color:#74B72E;"></p>
+    <button type="button" onclick="printPersonConstructorObjects()">Print PersonConstructor objects</button>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Property Default Values</h2>
+    <h4>A <span style="color:#FF0000">value</span> given to a property will be a 
+    <span style="color:#FF0000">default value</span> for all objects created by the constructor:</h4>
+
+    <p id="myPrintPersonDefaultValue" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_PersonDefaultValue()">Print PersonConstructor default values</button>
+
+    
+
+
+    <!--------------------Scripts-------------------->
+    <script src="001_Object_Constructors.js"></script>
+    <script src="002_Property_Default_Values.js"></script>
+    
+   
+    
+</body>
+
+</html>

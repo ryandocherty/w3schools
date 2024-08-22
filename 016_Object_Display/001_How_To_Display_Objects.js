@@ -111,7 +111,6 @@ const fruitsObject_ObjectEntries = {
 
 
 
-
 //----Displaying Properties Using JSON.stringify()----
 
 //JavaScript objects can be converted to a string with JSON method JSON.stringify()
