@@ -1,4 +1,4 @@
-//----Property Default Values----
+//--------Property Default Values--------
 
 //A value given to a property will be a default value for all objects created by the constructor:
 
