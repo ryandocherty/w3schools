@@ -8,29 +8,47 @@ function PersonConstructor2(first, last, age, eyecolor) {
     this.nationality = "English";
 }
 
-const myFather = new PersonConstructor2("Jimbo", "Jams", 42, "green");
+const myFather2 = new PersonConstructor2("Jimbo", "Jams", 42, "green");
+
 
 //Adding a property to a created object is easy:
 //Note - The new property will be added to myFather. Not to any other Person Objects.
-myFather.nationality = "Scottish";
+myFather2.nationality = "Scottish";
 
 
 
 //----------Adding a Property to a Constructor----------
 
 //You can NOT add a new property to an object constructor:
-//PersonConstructor2.nationality = "Welsh";
+PersonConstructor2.height = "5 ft 9";
 
 //To add a new property, you must add it to the constructor function prototype:
-//PersonConstructor2.prototype.nationality = "Irish";
+PersonConstructor2.prototype.height = "5 ft 9";
+
+const myBrother2 = new PersonConstructor2("Jimothy", "Jenkins", 24, "blue");
 
 
 
 
 
+//----Print Functions----
 
 function print_AddPropertyToObject(){
     document.getElementById("myPrintAddPropertyToObject").innerHTML =
     'myFather.nationality = "Scottish";' + '<br>' +
-    'myFather is ' + myFather.nationality;
-};
+    'Nationality of myFather is ' + myFather2.nationality;
+}
+
+
+function print_AddPropertyToObjectConstructor() {
+    document.getElementById("myPrintAddPropertyToObjectConstructor").innerHTML =
+    'Person.height = "5 ft 9";' + '<br>' +
+    'Height of myBrother is undefined';
+}
+
+
+function print_AddPropertyPrototype(){
+    document.getElementById("myPrintAddPropertyPrototype").innerHTML =
+    'Person.prototype.height = "5 ft 9";' + '<br>' +
+    'Height of myBrother is ' + myBrother2.height;
+}

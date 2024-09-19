@@ -29,7 +29,6 @@ const mySelf = new PersonConstructor("Megatron", "Doc", 29, "blue");
 
 
 
-
 function print_PersonConstructor(){
     document.getElementById("myPrintPersonConstructor").innerHTML =
     'function Person(first, last, age, eye){' + '<br>' +

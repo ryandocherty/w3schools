@@ -20,8 +20,8 @@
     <button type="button" onclick="print_PersonConstructor()">Print PersonConstructor</button>
 
     <h3>Note:</h3>
-    <h4>In the constructor function, <span style="color:#FF0000">this</span> has no value.</h4>
-    <h4>The value of <span style="color:#FF0000">this</span> will become the new object when a new object is created.</h4>
+    <h4>In the constructor function, <span style="color:#74B72E">this</span> has no value.</h4>
+    <h4>The value of <span style="color:#74B72E">this</span> will become the new object when a new object is created.</h4>
     <h4>Now we can use <span style="color:#74B72E">new Person()</span> to create many new Person objects:</h4>
 
     <p id="myPrintPersonConstructorObjects" style="color:#74B72E;"></p>
@@ -44,10 +44,117 @@
 
     <h2>Adding a Property to an Object</h2>
     <h4>Adding a property to a created object is easy:</h4>
+    <h4>Note: The new property will be added to 
+        <span style="color:#FF0000">myFather</span>. Not to any other 
+        <span style="color:#FF0000">Person objects</span>.
+    </h4>
 
     <p id="myPrintAddPropertyToObject" style="color:#74B72E;"></p>
     <button type="button" onclick="print_AddPropertyToObject()">Add property to object</button>
 
+
+    <p>&nbsp;</p>
+
+
+    <h2>Adding a Property to a Constructor</h2>
+    <h4>You can <span style="color:#FF0000">NOT</span> add a new property to an object constructor:</h4>
+
+    <p id="myPrintAddPropertyToObjectConstructor" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_AddPropertyToObjectConstructor()">Add property to object constructor</button>
+
+    <h4>To add a new property, you must add it to the constructor function prototype:</h4>
+
+    <p id="myPrintAddPropertyPrototype" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_AddPropertyPrototype()">Add property to object using prototype</button>
+    
+
+    <p>&nbsp;</p>
+
+
+    <h2>Constructor Function Methods</h2>
+    <h4>A constructor function can also have <span style="color:#FF0000">methods</span>:</h4>
+
+    <p id="myPrintConstructorFunctionMethod" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_ConstructorFunctionMethod()">Print name using fullName method</button>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Adding a Method to an Object</h2>
+    <h4>Adding a method to a created object is easy: </h4>
+    <h4>Note: The new property will be added to 
+        <span style="color:#FF0000">myBrother</span>. Not to any other 
+        <span style="color:#FF0000">Person objects</span>.
+    </h4>
+
+    <p id="myPrintAddMethodToObject" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_AddMethodToObject()">Add method to object</button>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Adding a Method to a Constructor</h2>
+    <h4>You cannot add a new method to an object constructor function.</h4>
+    <h4>This code will produce a TypeError:</h4>
+
+    <p id="myPrintAddMethodToConstructorError" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_AddMethodToConstructorError()">Print TypeError</button>
+
+    <h4>Adding a new method must be done to the constructor function prototype:</h4>
+
+    <p id="myPrintAddMethodPrototype" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_AddMethodPrototype()">Print age using ageTimesTen method</button>
+
+    <h4>Note: The <span style="color:#74B72E">changeName()</span> 
+        function assigns the value of <span style="color:#74B72E">_age</span> 
+        to the person's <span style="color:#74B72E">age</span> 
+        property, substituting <span style="color:#74B72E">this</span>
+        with <span style="color:#74B72E">myBrother3</span>.
+    </h4>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Built-in JavaScript Constructors</h2>
+    <h4>JavaScript has built-in constructors for all native objects:</h4>
+    <h5>new Object()   // A new Object object</h5>
+    <h5>new Array()    // A new Array object</h5>
+    <h5>new Map()      // A new Map object</h5>
+    <h5>new Set()      // A new Set object</h5>
+    <h5>new Date()     // A new Date object</h5>
+    <h5>new RegExp()   // A new RegExp object</h5>
+    <h5>new Function() // A new Function object</h5>
+
+    <p id="myPrintTypeofObjectConstructors" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_typeof_Object_Constructors()">Print typeof Object Constructors</button>
+
+    <h4>Note: The <span style="color:#74B72E">math()</span> 
+        object is not in the list. <span style="color:#74B72E">Math</span> 
+        is a global object. The <span style="color:#74B72E">new</span> 
+        keyword cannot be used on <span style="color:#74B72E">Math</span>.
+    </h4>
+
+
+    <p>&nbsp;</p>
+
+    
+    <h2>Did You Know?</h2>
+    <h4>Use object literals <span style="color:#74B72E">{}</span> 
+        instead of <span style="color:#74B72E">new Object()</span>.</h4>
+    <h4>Use array literals <span style="color:#74B72E">[]</span> instead of 
+        <span style="color:#74B72E">new Array()</span>.</h4>
+    <h4>Use pattern literals <span style="color:#74B72E">/()/</span>instead of 
+        <span style="color:#74B72E">new RegExp()</span>.</h4>
+    <h4>Use function expressions <span style="color:#74B72E">() {}</span> instead of 
+        <span style="color:#74B72E">new Function()</span>.
+    </h4>
+
+    <p id="myPrintTypeofLiterals" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_typeof_Literals()">Print typeof Literals</button>
+    
 
     <p>&nbsp;</p>
 
@@ -56,6 +163,8 @@
     <script src="001_Object_Constructors.js"></script>
     <script src="002_Property_Default_Values.js"></script>
     <script src="003_Adding_Properties.js"></script>
+    <script src="004_Constructor_Function_Methods.js"></script>
+    <script src="005_BuiltIn_JS_Constructors.js"></script>
     
    
     

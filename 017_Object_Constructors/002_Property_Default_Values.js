@@ -17,7 +17,6 @@ const myCat2 = new PersonConstructor("Rosa", "Doc", 4.5, "brown");
 
 
 
-
 function print_PersonDefaultValue(){
     document.getElementById("myPrintPersonDefaultValue").innerHTML =
     'myCat1 is ' + myCat1.nationality + '<br>' +

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:#000000; color:#ffffff; font-family: sans-serif;" >
+
+    <!--------------------Statements-------------------->
+    <h1>JavaScript Events</h1>
+
+
+    <p>&nbsp;</p>
+
+
+    <h4>HTML events are <span style="color:#FF0000">"things"</span> that happen to HTML elements.</h4>
+    <h4>When JavaScript is used in HTML pages, JavaScript can <span style="color:#FF0000">"react"</span> on these events.</h4>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>HTML Events</h2>
+    <h4>An HTML event can be something the browser does, or something a user does.</h4>
+    <h4>Here are some examples of HTML events:</h4>
+    <h4>&nbsp &nbsp • A HTML web page has finished loading</h4>
+    <h4>&nbsp &nbsp • A HTML input field was changed</h4>
+    <h4>&nbsp &nbsp • A HTML button was clicked</h4>
+    <h4>Often, when events happen, you may want to do something.</h4>
+    <h4>JavaScript lets you execute code when events are detected.</h4>
+
+    <p id="myHTMLElementsQuotes" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_HTMLElementsQuotes()">Print HTML Elements Quotes</button>
+
+    <h4>In the following example, an 
+        <span style="color:#FF0000">onclick</span> attribute (with code), is added to a 
+        <span style="color:#FF0000">button</span> element:
+    </h4>
+
+    <p id="myPrintCurrentTime" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_CurrentTime()">Print current time</button>
+
+    <h4>In the example above, the JavaScript code changes the content of the element with 
+        <span style="color:#74B72E">id="myPrintCurrentTime"</span>.</h4>
+    <h4>In the next example, the code changes the content of its own element (using
+        <span style="color:#74B72E">this.innerHTML</span>):</h4>
+
+    <button type="button" onclick="this.innerHTML=Date()">Print current time using this.innerHTML</button>
+
+    <h4>JavaScript code is often several lines long. It is more common to see event attributes calling functions:</h4>
+
+    <p id="myPrintCurrentTime2" style="color:#74B72E;"></p>
+    <button type="button" onmouseover="print_CurrentTime2()">Print current time2</button>
+
+
+    <p>&nbsp;</p>
+
+    
+    <!--------------------Scripts-------------------->
+    <script src="001_HTML_Events.js"></script>
+    
+    
+   
+    
+</body>
+
+</html>
