@@ -18,7 +18,7 @@ function valueOfZ_Function(){
 //The statements are executed, one by one, in the same order as they are written
 //JavaScript programs (and JavaScript statements) are often called JavaScript code
 
-//This statement tells the browser to write "Hello Dolly." inside an HTML element with id="demo":
+//This statement tells the browser to write "Hello Dolly." inside an HTML element with id="demo1":
 
 function writeHelloDolly_Function(){
     document.getElementById("demo1").innerHTML = "Hello Dolly";

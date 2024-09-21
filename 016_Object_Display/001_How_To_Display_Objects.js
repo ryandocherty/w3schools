@@ -15,7 +15,7 @@ const personObject_SimpleDisplay = {
     age: 30,
     city: "Lincoln",
 
-    print_personObject_SimpleDisplay: function () {
+    print_personObject_SimpleDisplay: function(){
         document.getElementById("myPrintPersonObjectSimpleDisplay").innerHTML = personObject_SimpleDisplay;
     }
 };
@@ -31,7 +31,7 @@ const personObject_StringDisplay = {
     age: 29,
     city: "London",
 
-    print_personObject_StringDisplay: function () {
+    print_personObject_StringDisplay: function(){
         document.getElementById("myPrintPersonObjectStringDisplay").innerHTML =
             this.name + "<br>" + this.age + "<br>" + this.city;
     }
@@ -49,7 +49,7 @@ const personObject_LoopDisplay = {
     city: "Dragonstone",
     color: "Bronze",
 
-    print_personObject_LoopDisplay: function () {
+    print_personObject_LoopDisplay: function(){
         let textForLabel = "";
         for (let x in personObject_LoopDisplay) {
             if (!(personObject_LoopDisplay[x] instanceof Function)) {
@@ -76,7 +76,7 @@ const personObject_ObjectValues = {
     age: 24,
     city: "Liverpool",
 
-    print_personObject_ObjectValues: function () {
+    print_personObject_ObjectValues: function(){
         let textForLabel = "";
         const myPersonObjectValuesArray = Object.values(personObject_ObjectValues);
         for (let x in myPersonObjectValuesArray) {
@@ -98,7 +98,7 @@ const fruitsObject_ObjectEntries = {
     Oranges: 200,
     Apples: 420,
 
-    print_fruitsObject_ObjectEntries: function () {
+    print_fruitsObject_ObjectEntries: function(){
         let textForLabel = "";
         for (let [fruit, amount] of Object.entries(fruitsObject_ObjectEntries)) {
             if (!(fruit && amount instanceof Function)) {

@@ -8,3 +8,6 @@ let person1="Hege";
 
 //A good practice is to put spaces around operators ( = + - * / ):
 let x = y + z;
+
+//NOT:
+let xxx=yyy+zzz;

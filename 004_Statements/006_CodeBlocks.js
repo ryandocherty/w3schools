@@ -8,6 +8,6 @@
 //One place you will find statements grouped together in blocks, is in JavaScript functions:
 
 function codeBlocks_Function(){
-    document.getElementById("demo4").innerHTML = "Hello Dolly!";
+    document.getElementById("demo4").innerHTML = "Ey up ducky!";
     document.getElementById("demo5").innerHTML = "How are you?";
 }
