@@ -10,8 +10,8 @@
     <p>&nbsp;</p>
 
 
-    <h4>Strings are for storing text</h4>
-    <h4>Strings are written with quotes</h4>
+    <h4>Strings are for <span style="color:#FF0000">storing text</span>.</h4>
+    <h4>Strings are written <span style="color:#FF0000">with quotes</span>.</h4>
 
 
     <p>&nbsp;</p>
@@ -19,21 +19,195 @@
 
     <h2>Using Quotes</h2>
     <h4>A JavaScript string is zero or more characters written inside quotes.</h4>
+    <h4><span style="color:#74B72E">let text = "John Doe";</span></h4>
+    <h4>You can use single or double quotes:</span></h4>
+    <h4><span style="color:#74B72E">let carName1 = "Volvo XC60";</span></h4>
+    <h4><span style="color:#74B72E">let carName2 = 'Volvo XC60';</span></h4>
+    <h4><span style="color:#FF0000">Note: Strings created with single or double quotes work the same. There is no difference between the two.</span></h4>
     
 
-    <p id="myHTMLElementsQuotes" style="color:#74B72E;"></p>
-    <button type="button" onclick="print_HTMLElementsQuotes()">Print HTML Elements Quotes</button>
+    <p>&nbsp;</p>
 
+
+    <h2>Quotes Inside Quotes</h2>
+    <h4>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</h4>
+
+    <p id="myStringsDifferentQuotes" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_StringsWithDifferentQuotes()">Print strings</button>
 
 
     <p>&nbsp;</p>
 
+
+    <h2>Template Strings</h2>
+    <h4>Templates were introduced with ES6 (JavaScript 2016).</h4>
+    <h4>Templates are strings enclosed in backticks (`This is a template string`).</h4>
+    <h4>Templates allow single and double quotes inside a string:</h4>
+    <h4><span style="color:#74B72E">let text = `He's often called "Johnny"`;</span></h4>
+    <h4><span style="color:#FF0000">Note: Templates are not supported in Internet Explorer.</span></h4>
+
+
+    <p>&nbsp;</p>
     
+
+    <h2>String Length</h2>
+    <h4>To find the length of a string, use the built-in <span style="color:#74B72E">length</span> property:</h4>
+
+    <input type="text" id="enteredStringInput" name="enteredStringInput">
+    <button type="button" onclick="print_EnteredStringLength()">Print string length</button>
+    <p id="myStringLengthProperty" style="color:#74B72E;"></p>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Escape Characters</h2>
+    <h4>Because strings must be written within quotes, JavaScript will misunderstand this string:</h4>
+    <h4><span style="color:#74B72E">let text = "We are the so-called "Vikings" from the north.";</span></h4>
+    <h4>The string will be chopped to "We are the so-called ".</span></h4>
+    <h4>To solve this problem, you can use an <span style="color:#FF0000">backslash escape character</span>.</span></h4>
+    <h4>The backslash escape character (<span style="color:#74B72E">\</span>) turns special characters into string characters:</span></h4>
+
+    <table style="width:25%">
+        <tr>
+            <th style="text-align:left">Code</th>
+            <th style="text-align:left">Result</th>
+            <th style="text-align:left">Description</th>
+        </tr>
+        <tr>
+            <td>\'</td>
+            <td>'</td>
+            <td>Single quote</td>
+        </tr>
+        <tr>
+            <td>\"</td>
+            <td>"</td>
+            <td>Double quote</td>
+        </tr>
+        <tr>
+            <td>\\</td>
+            <td>\</td>
+            <td>Backslash</td>
+        </tr>
+    </table>
+
+    <h3>Examples:</h3>
+    <h4>\" inserts a double quote in a string:</h4>
+    <h4><span style="color:#74B72E">let text = "We are the so-called \"Vikings\" from the north.";</span></h4>
+
+    <p id="myDoubleQuoteInAString" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_DoubleQuoteInAString()">Print string with double quotes</button>
+
+    <h4>\' inserts a single quote in a string:</h4>
+    <h4><span style="color:#74B72E">let text= 'It\'s alright.';</span></h4>
+
+    <p id="mySingleQuoteInAString" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_SingleQuoteInAString()">Print string with single quotes</button>
+
+    <h4>\\ inserts a backslash in a string:</h4>
+    <h4><span style="color:#74B72E">let text = "The character \\ is called backslash.";</span></h4>
+
+    <p id="myBackslashInAString" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_BackslashInAString()">Print string with backslash</button>
+
+    <h4>Six other escape sequences are valid in JavaScript:</h4>
+
+    <table style="width:25%">
+        <tr>
+            <th style="text-align:left">Code</th>
+            <th style="text-align:left">Result</th>
+        </tr>
+        <tr>
+            <td>\b</td>
+            <td>Backspace</td>
+        </tr>
+        <tr>
+            <td>\f</td>
+            <td>Form Feed</td>
+        </tr>
+        <tr>
+            <td>\n</td>
+            <td>New Line</td>
+        </tr>
+        <tr>
+            <td>\r</td>
+            <td>Carriage Return</td>
+        </tr>
+        <tr>
+            <td>\t</td>
+            <td>Horizontal Tabulator</td>
+        </tr>
+        <tr>
+            <td>\v</td>
+            <td>Vertical Tabulator</td>
+        </tr>
+    </table>
+
+    <h4><span style="color:#FF0000">Note: the 6 escape characters above were originally designed to control typewriters, teletypes, and fax machines. 
+        They do not make any sense in HTML.</span>
+    </h4>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Breaking Long Lines</h2>
+    <h4>For readability, programmers often like to avoid long code lines.</h4>
+    <h4>A safe way to break up a <span style="color:#FF0000">statement</span> is after an operator:</h4>
+    <h4 style="color:#74B72E;">document.getElementById("demo").innerHTML = <br>"Hello Dolly!";</h4>
+    <h4>A safe way to break up a <span style="color:#FF0000">string</span> is by using string addition:</h4>
+    <h4 style="color:#74B72E;">document.getElementById("demo").innerHTML = "Hello" + <br> "Dolly!";</h4>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Template Strings</h2>
+    <h4>Templates are strings enclosed in backticks (`This is a template string`).</h4>
+    <h4>Templates allow multiline strings:</h4>
+    <h4 style="color:#74B72E;">let text = `The quick <br> brown fox <br> jumps over <br> the lazy dog`;</h4>
+    <h4 style="color:#FF0000">Note: Templates are not supported in Internet Explorer.</h4>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>JavaScript Strings as Objects</h2>
+    <h4>Normally, JavaScript strings are primitive values, created from literals:</h4>
+    <h4 style="color:#74B72E;">let x = "John";</h4>
+    <h4>But strings can also be defined as objects with the keyword new:</h4>
+    <h4 style="color:#74B72E;">let y = new String("John");</h4>
+    <h4 style="color:#FF0000">Note: Do not create String objects. 
+        <br>The <span style="color:#74B72E">new</span> keyword complicates the code and slows down execution speed.
+        <br>String objects can produce unexpected results:
+    </h4>
+
+    <h4>When using the <span style="color:#74B72E">==</span> operator, x and y are equal:</h4>
+
+    <p id="myStringObjectEqual" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_StringObjectEqual()">Print (x==y)</button>
+
+    <h4>When using the <span style="color:#74B72E">===</span> operator, x and y are not equal:</h4>
+
+    <p id="myStringObjectNotEqual" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_StringObjectNotEqual()">Print (x===y)</button>
+    <h4 style="color:#FF0000">Note the difference between 
+        <span style="color:#74B72E">(x==y)</span> and 
+        <span style="color:#74B72E">(x===y)</span>.
+    </h4>
+
+    <h4 style="color:#74B72E;">let x = new String("John"); <br> let y = new String("John");</h4>
+    <p id="myCompareStringObjects" style="color:#74B72E;"></p>
+    <button type="button" onclick="print_StringObjectsComparisons()">Compare string objects</button>
+    
+
+    <p>&nbsp;</p>
+
+
     <!--------------------Scripts-------------------->
-    <script src="001_HTML_Events.js"></script>
-    
-    
-   
+    <script src="001_JavaScript_Strings.js"></script>
+    <script src="002_Escape_Characters.js"></script>
+    <script src="004_JavaScript_Strings_as_Objects.js"></script>
     
 </body>
 
