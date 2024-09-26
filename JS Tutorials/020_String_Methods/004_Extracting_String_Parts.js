@@ -20,13 +20,15 @@ function print_StringSplice(){
     let forSlice_End_Pos =
         document.getElementById("enteredStringInputSliceEndPos").valueAsNumber;
 
-    if ((forSlice_StartPos >= 1) && (forSlice_End_Pos <= (enteredString_ForSlice.length + 1))){
+    if ((forSlice_StartPos >= 1) && 
+        (forSlice_End_Pos <= (enteredString_ForSlice.length + 1)) &&
+        forSlice_StartPos < forSlice_End_Pos){
         document.getElementById("myStringSliced").innerHTML =
             `Sliced String: ` + enteredString_ForSlice.slice(forSlice_StartPos - 1, forSlice_End_Pos - 1);
     }
     else{
         document.getElementById("myStringSliced").innerHTML =
-            `Position(s) not in range`;
+            `Invalid position(s)`;
     }
 }
 
@@ -52,6 +54,6 @@ function print_StringSplice_OmitSecondParameter(){
     }
     else {
         document.getElementById("myStringSliced_OmitSecondParam").innerHTML =
-            `Position not in range`;
+            `Invalid position(s)`;
     }
 }
