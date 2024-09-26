@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:#000000; color:#ffffff; font-family: sans-serif;" >
+
+    <!--------------------Statements-------------------->
+    <h1>JavaScript String Methods</h1>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Basic String Methods</h2>
+    <h4>Javascript strings are primitive and immutable: 
+        All string methods produce a new string without altering the original string.
+    </h4>
+    <h4>String length 
+        <br>String charAt()
+        <br>String charCodeAt()
+        <br>String at()
+        <br>String [ ]
+        <br>String slice()
+        <br>String substring()
+        <br>String substr()
+        <br>String toUpperCase()
+        <br>String toLowerCase()
+        <br>String concat()
+        <br>String trim()
+        <br>String trimStart()
+        <br>String trimEnd()
+        <br>String padStart()
+        <br>String padEnd()
+        <br>String repeat()
+        <br>String replace()
+        <br>String replaceAll()
+        <br>String split()
+    </h4>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>JavaScript String Length</h2>
+    <h4>The <span style="color:#74B72E">length</span> property returns the length of a string:</h4>
+
+    <input type="text" id="enteredStringInput" name="enteredStringInput">
+    <button type="button" onclick="print_EnteredStringLength()">Print string length</button>
+    <p id="myStringLengthProperty" style="color:#74B72E;"></p>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Extracting String Characters</h2>
+    <h4>There are 4 methods for extracting string characters:</h4>
+    <h4>The <span style="color:#74B72E">at(position)</span> Method
+        <br>The <span style="color:#74B72E">charAt(position)</span> Method
+        <br>The <span style="color:#74B72E">charCodeAt(position)</span> Method
+        <br>Using property access [ ] like in arrays
+    </h4>
+
+    <br>
+
+    <h3>JavaScript String charAt()</h3>
+    <h4>The 
+        <span style="color:#74B72E">charAt()</span> method returns the character at a specified index (position) in a string:
+    </h4>
+    
+    <label for="enteredStringInputCharAt">Enter String:</label>
+    <input type="text" id="enteredStringInputCharAt" name="enteredStringInputCharAt"><br>
+    <label for="enteredStringInputCharAtPosition">Enter Position:</label>
+    <input type="number" min="1" id="enteredStringInputCharAtPosition" name="enteredStringInputCharAtPosition"><br>
+    <button type="button" onclick="print_StringCharAt()">Print string position</button>
+    <p id="myStringCharAtProperty" style="color:#74B72E;"></p>
+
+    <br>
+
+    <h3>JavaScript String charCodeAt()</h3>
+    <h4>The 
+        <span style="color:#74B72E">charCodeAt()</span> method returns the code of the character at a specified index in a string:
+        <br>The method returns a UTF-16 code (an integer between 0 and 65535).
+    </h4>
+   
+    <label for="enteredStringInputCharCodeAt">Enter Character:</label>
+    <input type="text" maxlength="1" id="enteredStringInputCharCodeAt" name="enteredStringInputCharCodeAt"><br>
+    
+    <button type="button" onclick="print_StringCharCodeAt()">Print character UTF-16 code</button>
+    <p id="myStringCharCodeAtProperty" style="color:#74B72E;"></p>
+
+    <br>
+
+    <h3>JavaScript String at()</h3>
+    <h4>ES2022 introduced the string method <span style="color:#74B72E">at()</span>:</h4>
+
+    <label for="enteredStringInputAt">Enter String:</label>
+    <input type="text" id="enteredStringInputAt" name="enteredStringInputAt"><br>
+    <label for="enteredStringInputAtPosition">Enter Position:</label>
+    <input type="number" min="1" id="enteredStringInputAtPosition" name="enteredStringInputAtPosition"><br>
+    <button type="button" onclick="print_StringAt()">Print string position</button>
+    <p id="myStringAtProperty" style="color:#74B72E;"></p>
+
+    <h4>The <span style="color:#74B72E">at()</span>method returns the character at a specified index (position) in a string.
+        <br>The <span style="color:#74B72E">at()</span> method is supported in all modern browsers since March 2022
+    </h4>
+
+    <h4 style="color:#ECE81A">NOTE:
+        <br>The <span style="color:#74B72E">at()</span> method is a new addition to JavaScript.
+        <br>It allows the use of negative indexes while <span style="color:#74B72E">charAt()</span> does not.
+        <br>Now you can use <span style="color:#74B72E">myString.at(-2)</span> instead of 
+        <span style="color:#74B72E">charAt(myString.length-2)</span>.
+    </h4>
+
+
+    <p>&nbsp;</p>
+
+    <h2>Property Access [ ]</h2>
+    <h4>Example:</h4>
+    <h4><span style="color:#74B72E">let text = "HELLO WORLD";</span>
+        <br><span style="color:#74B72E">let char = text[3];</span>
+    </h4>
+
+    <h4 style="color:#ECE81A">NOTE:
+        <br>Property access might be a little unpredictable:
+        <br>It makes strings look like arrays (but they are not).
+        <br>If no character is found, 
+        <span style="color:#74B72E">[ ]</span> returns undefined, while 
+        <span style="color:#74B72E">charAt()</span> returns an empty string.
+        <br>It is read only. 
+        <span style="color:#74B72E">string[0] = "A"</span> gives no error (but does not work).
+    </h4>
+
+
+    <p>&nbsp;</p>
+
+
+    <h2>Extracting String Parts</h2>
+    <h4>There are 3 methods for extracting a part of a string:</h4>
+    <h4 style="color:#74B72E">slice(start, end)
+        <br>substring(start, end)
+        <br>substr(start, length)
+    </h4>
+
+    <br>
+
+    <h3>JavaScript String slice()</h3>
+    <h4><span style="color:#74B72E">slice()</span> extracts a part of a string and returns the extracted part in a new string.
+        <br>The method takes 2 parameters: start position, and end position (end not included).
+    </h4>
+
+    <label for="enteredStringInputSlice">Enter string:</label>
+    <input type="text" id="enteredStringInputSlice" name="enteredStringInputSlice"><br>
+    <label for="enteredStringInputSliceStartPos">Enter start slice position:</label>
+    <input type="number" min="1" id="enteredStringInputSliceStartPos" name="enteredStringInputSliceStartPos"><br>
+    <label for="enteredStringInputSliceEndPos">Enter end slice position:</label>
+    <input type="number" min="1" id="enteredStringInputSliceEndPos" name="enteredStringInputSliceEndPos"><br>
+    <button type="button" onclick="print_StringSplice()">Print sliced string</button>
+    <p id="myStringSliced" style="color:#74B72E;"></p>
+
+    <h4 style="color:#ECE81A">NOTE:
+        <br>JavaScript counts positions from zero.
+        <br>1st position is 0.
+        <br>2nd position is 1.
+        <br>18th position is 17.
+    </h4>
+
+    <h4>If you omit the second parameter, the method will slice out the rest of the string:</h4>
+
+    <label for="enteredStringSlice_OmitSecondParam">Enter string:</label>
+    <input type="text" id="enteredStringSlice_OmitSecondParam" name="enteredStringSlice_OmitSecondParam"><br>
+    <label for="enteredStringSliceStartPos_OmitSecondParam">Enter start slice position:</label>
+    <input type="number" min="1" id="enteredStringSliceStartPos_OmitSecondParam" name="enteredStringSliceStartPos_OmitSecondParam"><br>
+    <button type="button" onclick="print_StringSplice_OmitSecondParameter()">Print sliced string</button>
+    <p id="myStringSliced_OmitSecondParam" style="color:#74B72E;"></p>
+    
+
+    <p>&nbsp;</p>
+
+
+    <p>&nbsp;</p>
+
+    <!--------------------Scripts-------------------->
+    <script src="001_Basic_String_Methods.js"></script>
+    <script src="002_Extracting_String_Methods.js"></script>
+    <script src="004_Extracting_String_Parts.js"></script>
+    
+</body>
+
+</html>
