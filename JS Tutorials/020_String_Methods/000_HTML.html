@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
 
-<body style="background-color:#000000; color:#ffffff; font-family: sans-serif;" >
+<body style="background-color:#000000; color:#ffffff; font-family: sans-serif;">
 
     <!--------------------Statements-------------------->
     <h1>JavaScript String Methods</h1>
 
 
+
     <p>&nbsp;</p>
 
+    <hr>
 
     <h2>Basic String Methods</h2>
-    <h4>Javascript strings are primitive and immutable: 
-        All string methods produce a new string without altering the original string.
+    <h4>Javascript strings are primitive and immutable:
+        <br>All string methods produce a new string without altering the original string.
     </h4>
-    <h4>String length 
+    <h4>String length
         <br>String charAt()
         <br>String charCodeAt()
         <br>String at()
@@ -39,17 +41,19 @@
 
     <p>&nbsp;</p>
 
+    <hr>
 
     <h2>JavaScript String Length</h2>
     <h4>The <span style="color:#74B72E">length</span> property returns the length of a string:</h4>
 
-    <input type="text" id="enteredStringInput" name="enteredStringInput">
+    <input type="text" id="enteredStringInput" name="enteredStringInput" size="40">
     <button type="button" onclick="print_EnteredStringLength()">Print string length</button>
     <p id="myStringLengthProperty" style="color:#74B72E;"></p>
 
 
     <p>&nbsp;</p>
 
+    <hr>
 
     <h2>Extracting String Characters</h2>
     <h4>There are 4 methods for extracting string characters:</h4>
@@ -62,13 +66,14 @@
     <br>
 
     <h3>JavaScript String charAt()</h3>
-    <h4>The 
-        <span style="color:#74B72E">charAt()</span> method returns the character at a specified index (position) in a string:
+    <h4>The
+        <span style="color:#74B72E">charAt()</span> method returns the character at a specified index (position) in a
+        string:
     </h4>
-    
-    <label for="enteredStringInputCharAt">Enter String:</label>
-    <input type="text" id="enteredStringInputCharAt" name="enteredStringInputCharAt"><br>
-    <label for="enteredStringInputCharAtPosition">Enter Position:</label>
+
+    <label for="enteredStringInputCharAt">Enter string:</label>
+    <input type="text" id="enteredStringInputCharAt" name="enteredStringInputCharAt" size="40"><br>
+    <label for="enteredStringInputCharAtPosition">Enter position:</label>
     <input type="number" min="1" id="enteredStringInputCharAtPosition" name="enteredStringInputCharAtPosition"><br>
     <button type="button" onclick="print_StringCharAt()">Print string position</button>
     <p id="myStringCharAtProperty" style="color:#74B72E;"></p>
@@ -76,14 +81,14 @@
     <br>
 
     <h3>JavaScript String charCodeAt()</h3>
-    <h4>The 
-        <span style="color:#74B72E">charCodeAt()</span> method returns the code of the character at a specified index in a string:
+    <h4>The
+        <span style="color:#74B72E">charCodeAt()</span> method returns the code of the character at a specified index in
+        a string:
         <br>The method returns a UTF-16 code (an integer between 0 and 65535).
     </h4>
-   
-    <label for="enteredStringInputCharCodeAt">Enter Character:</label>
-    <input type="text" maxlength="1" id="enteredStringInputCharCodeAt" name="enteredStringInputCharCodeAt"><br>
-    
+
+    <label for="enteredStringInputCharCodeAt">Enter character:</label>
+    <input type="text" maxlength="1" id="enteredStringInputCharCodeAt" name="enteredStringInputCharCodeAt" size="2"><br>
     <button type="button" onclick="print_StringCharCodeAt()">Print character UTF-16 code</button>
     <p id="myStringCharCodeAtProperty" style="color:#74B72E;"></p>
 
@@ -92,26 +97,29 @@
     <h3>JavaScript String at()</h3>
     <h4>ES2022 introduced the string method <span style="color:#74B72E">at()</span>:</h4>
 
-    <label for="enteredStringInputAt">Enter String:</label>
-    <input type="text" id="enteredStringInputAt" name="enteredStringInputAt"><br>
-    <label for="enteredStringInputAtPosition">Enter Position:</label>
+    <label for="enteredStringInputAt">Enter string:</label>
+    <input type="text" id="enteredStringInputAt" name="enteredStringInputAt" size="40"><br>
+    <label for="enteredStringInputAtPosition">Enter position:</label>
     <input type="number" min="1" id="enteredStringInputAtPosition" name="enteredStringInputAtPosition"><br>
     <button type="button" onclick="print_StringAt()">Print string position</button>
     <p id="myStringAtProperty" style="color:#74B72E;"></p>
 
-    <h4>The <span style="color:#74B72E">at()</span>method returns the character at a specified index (position) in a string.
+    <h4>The <span style="color:#74B72E">at()</span>method returns the character at a specified index (position) in a
+        string.
         <br>The <span style="color:#74B72E">at()</span> method is supported in all modern browsers since March 2022
     </h4>
 
     <h4 style="color:#ECE81A">NOTE:
         <br>The <span style="color:#74B72E">at()</span> method is a new addition to JavaScript.
         <br>It allows the use of negative indexes while <span style="color:#74B72E">charAt()</span> does not.
-        <br>Now you can use <span style="color:#74B72E">myString.at(-2)</span> instead of 
+        <br>Now you can use <span style="color:#74B72E">myString.at(-2)</span> instead of
         <span style="color:#74B72E">charAt(myString.length-2)</span>.
     </h4>
 
 
     <p>&nbsp;</p>
+
+    <hr>
 
     <h2>Property Access [ ]</h2>
     <h4>Example:</h4>
@@ -122,16 +130,17 @@
     <h4 style="color:#ECE81A">NOTE:
         <br>Property access might be a little unpredictable:
         <br>It makes strings look like arrays (but they are not).
-        <br>If no character is found, 
-        <span style="color:#74B72E">[ ]</span> returns undefined, while 
+        <br>If no character is found,
+        <span style="color:#74B72E">[ ]</span> returns undefined, while
         <span style="color:#74B72E">charAt()</span> returns an empty string.
-        <br>It is read only. 
+        <br>It is read only.
         <span style="color:#74B72E">string[0] = "A"</span> gives no error (but does not work).
     </h4>
 
 
     <p>&nbsp;</p>
 
+    <hr>
 
     <h2>Extracting String Parts</h2>
     <h4>There are 3 methods for extracting a part of a string:</h4>
@@ -140,20 +149,19 @@
         <br>substr(start, length)
     </h4>
 
-    <br>
-
     <h3>JavaScript String slice()</h3>
-    <h4><span style="color:#74B72E">slice()</span> extracts a part of a string and returns the extracted part in a new string.
+    <h4><span style="color:#74B72E">slice()</span> extracts a part of a string and returns the extracted part in a new
+        string.
         <br>The method takes 2 parameters: start position, and end position (end not included).
     </h4>
 
     <label for="enteredStringInputSlice">Enter string:</label>
-    <input type="text" id="enteredStringInputSlice" name="enteredStringInputSlice"><br>
+    <input type="text" id="enteredStringInputSlice" name="enteredStringInputSlice" size="40"><br>
     <label for="enteredStringInputSliceStartPos">Enter start slice position:</label>
     <input type="number" min="1" id="enteredStringInputSliceStartPos" name="enteredStringInputSliceStartPos"><br>
     <label for="enteredStringInputSliceEndPos">Enter end slice position:</label>
     <input type="number" min="1" id="enteredStringInputSliceEndPos" name="enteredStringInputSliceEndPos"><br>
-    <button type="button" onclick="print_StringSplice()">Print sliced string</button>
+    <button type="button" onclick="print_StringSlice()">Print sliced string</button>
     <p id="myStringSliced" style="color:#74B72E;"></p>
 
     <h4 style="color:#ECE81A">NOTE:
@@ -161,17 +169,108 @@
         <br>1st position is 0.
         <br>2nd position is 1.
         <br>18th position is 17.
+        <br>(I've attempted to alleviate this in the code)
     </h4>
 
     <h4>If you omit the second parameter, the method will slice out the rest of the string:</h4>
 
     <label for="enteredStringSlice_OmitSecondParam">Enter string:</label>
-    <input type="text" id="enteredStringSlice_OmitSecondParam" name="enteredStringSlice_OmitSecondParam"><br>
+    <input type="text" id="enteredStringSlice_OmitSecondParam" name="enteredStringSlice_OmitSecondParam" size="40"><br>
     <label for="enteredStringSliceStartPos_OmitSecondParam">Enter start slice position:</label>
-    <input type="number" min="1" id="enteredStringSliceStartPos_OmitSecondParam" name="enteredStringSliceStartPos_OmitSecondParam"><br>
-    <button type="button" onclick="print_StringSplice_OmitSecondParameter()">Print sliced string</button>
+    <input type="number" min="1" id="enteredStringSliceStartPos_OmitSecondParam"
+        name="enteredStringSliceStartPos_OmitSecondParam"><br>
+    <button type="button" onclick="print_StringSlice_OmitSecondParameter()">Print sliced string</button>
     <p id="myStringSliced_OmitSecondParam" style="color:#74B72E;"></p>
-    
+
+    <h4>If a parameter is negative, the position is counted from the end of the string:</h4>
+
+    <label for="enteredStringSlice_NegativeParam">Enter string:</label>
+    <input type="text" id="enteredStringSlice_NegativeParam" name="enteredStringSlice_NegativeParam" size="40"><br>
+    <label for="enteredStringSliceStartPos_NegativeParam">Enter negative start position</label>
+    <input type="number" max="-1" id="enteredStringSliceStartPos_NegativeParam"
+        name="enteredStringSliceStartPos_NegativeParam"><br>
+    <button type="button" onclick="print_StringSlice_NegativeParameter()">Print sliced string</button>
+    <p id="myStringSliced_NegativeParam" style="color:#74B72E;"></p>
+
+    <h4>This example slices out a portion of a string with two negative positions:</h4>
+
+    <label for="enteredStringSlice_BothNegative">Enter string:</label>
+    <input type="text" id="enteredStringSlice_BothNegative" name="enteredStringSlice_BothNegative" size="40"><br>
+    <label for="enteredStringSliceStartPos_BothNegative">Enter negative start position:</label>
+    <input type="number" max="-1" id="enteredStringSliceStartPos_BothNegative"
+        name="enteredStringSliceStartPos_BothNegative"><br>
+    <label for="enteredStringSliceEndPos_BothNegative">Enter negative end position:</label>
+    <input type="number" max="-1" id="enteredStringSliceEndPos_BothNegative"
+        name="enteredStringSliceEndPos_BothNegative"><br>
+    <button type="button" onclick="print_StringSlice_BothNegative()">Print sliced string</button>
+    <p id="myStringSliced_BothNegative" style="color:#74B72E;"></p>
+
+    <br>
+
+    <h3>JavaScript String substring()</h3>
+    <h4><span style="color:#74B72E">substring()</span> is similar to <span style="color:#74B72E">slice()</span>.
+        <br>The difference is that start and end values less than 0 are treated as 0 in
+        <span style="color:#74B72E">substring()</span>.
+    </h4>
+
+    <label for="enteredString_Substring">Enter string:</label>
+    <input type="text" id="enteredString_Substring" name="enteredString_Substring" size="40"><br>
+    <label for="enteredString_Substring_StartPos">Enter start position:</label>
+    <input type="number" id="enteredString_Substring_StartPos" name="enteredString_Substring_StartPos"><br>
+    <label for="enteredString_Substring_EndPos">Enter end position:</label>
+    <input type="number" id="enteredString_Substring_EndPos" name="enteredString_Substring_EndPos""><br>
+    <button type=" button" onclick="print_StringSubstring()">Print sliced string</button>
+    <p id="myString_Substring" style="color:#74B72E;"></p>
+
+    <h4>If you omit the second parameter, the method will slice out the rest of the string:</h4>
+
+    <label for="enteredSubstring_OmitSecondParam">Enter string:</label>
+    <input type="text" id="enteredSubstring_OmitSecondParam" name="enteredSubstring_OmitSecondParam" size="40"><br>
+    <label for="enteredSubstringStartPos_OmitSecondParam">Enter start slice position:</label>
+    <input type="number" min="1" id="enteredSubstringStartPos_OmitSecondParam"
+        name="enteredSubstringStartPos_OmitSecondParam"><br>
+    <button type="button" onclick="print_Substring_Omit2ndParam()">Print sliced string</button>
+    <p id="mySubstring_OmitSecondParam" style="color:#74B72E;"></p>
+
+    <br>
+
+    <h3>JavaScript String substr()</h3>
+    <h4><span style="color:#74B72E">substr()</span> is similar to <span style="color:#74B72E">slice()</span>.
+        <br>The difference is that the second parameter specifies the
+        <span style="color:#FF0000">length</span> of the extracted part.
+    </h4>
+
+    <label for="enteredString_substr">Enter string:</label>
+    <input type="text" id="enteredString_substr" name="enteredString_substr" size="40"><br>
+    <label for="enteredString_substr_StartPos">Enter start position:</label>
+    <input type="number" id="enteredString_substr_StartPos" name="enteredString_substr_StartPos"><br>
+    <label for="enteredString_substr_LengthPos">Enter length position:</label>
+    <input type="number" id="enteredString_substr_LengthPos" name="enteredString_substr_LengthPos"><br>
+    <button type="button" onclick="print_substr()">Print substr</button>
+    <p id="myString_substr" style="color:#74B72E;"></p>
+
+    <h4>If you omit the second parameter, <span style="color:#74B72E">substr()</span> will slice out the rest of the
+        string:</h4>
+
+    <label for="enteredsubstr_OmitSecondParam">Enter string:</label>
+    <input type="text" id="enteredsubstr_OmitSecondParam" name="enteredsubstr_OmitSecondParam" size="40"><br>
+    <label for="enteredsubstrStartPos_OmitSecondParam">Enter start position:</label>
+    <input type="number" min="1" id="enteredsubstrStartPos_OmitSecondParam"
+        name="enteredsubstrStartPos_OmitSecondParam"><br>
+    <button type="button" onclick="print_substr_Omit2ndParam()">Print substr</button>
+    <p id="mysubstr_OmitSecondParam" style="color:#74B72E;"></p>
+
+    <h4>If the first parameter is negative, the position counts from the end of the string:</h4>
+
+    <label for="enteredString_substr_negative">Enter string:</label>
+    <input type="text" id="enteredString_substr_negative" name="enteredString_substr_negative" size="40"><br>
+    <label for="enteredString_substr_negative_StartPos">Enter start position:</label>
+    <input type="number" id="enteredString_substr_negative_StartPos" name="enteredString_substr_negative_StartPos"><br>
+    <button type="button" onclick="print_substr_negative()">Print substr</button>
+    <p id="myString_substr_negative" style="color:#74B72E;"></p>
+
+
+
 
     <p>&nbsp;</p>
 
@@ -182,7 +281,7 @@
     <script src="001_Basic_String_Methods.js"></script>
     <script src="002_Extracting_String_Methods.js"></script>
     <script src="004_Extracting_String_Parts.js"></script>
-    
+
 </body>
 
 </html>

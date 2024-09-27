@@ -21,7 +21,7 @@ function print_StringCharAt(){
         if (enteredString_ForCharAt.charAt(enteredString_ForCharAtPosition - 1) === " "){
             document.getElementById("myStringCharAtProperty").innerHTML =
                 `Character at position ` + enteredString_ForCharAtPosition + ` is : ` +
-                `[SPACE]`;
+                `[space]`;
         }
         else{
             document.getElementById("myStringCharAtProperty").innerHTML =
@@ -31,7 +31,7 @@ function print_StringCharAt(){
     }
     else{
         document.getElementById("myStringCharAtProperty").innerHTML =
-            `No position found`;
+            `Invalid position(s)`;
     }
 }
 
@@ -45,7 +45,7 @@ function print_StringCharAt(){
 function print_StringCharCodeAt() {
     let enteredString_ForCharCodeAt = document.getElementById("enteredStringInputCharCodeAt").value;
     document.getElementById("myStringCharCodeAtProperty").innerHTML =
-        `UTF-16 code of character ` + `"` + enteredString_ForCharCodeAt + `" ` +
+        `UTF-16 code for ` + `"` + enteredString_ForCharCodeAt + `" ` +
         `is: ` + enteredString_ForCharCodeAt.charCodeAt(0);
 }
 
@@ -63,7 +63,7 @@ function print_StringAt(){
         if (enteredString_ForAt.at(enteredString_ForAtPosition - 1) === " "){
             document.getElementById("myStringAtProperty").innerHTML =
                 `Character at position ` + enteredString_ForAtPosition + ` is : ` +
-                `[SPACE]`;
+                `[space]`;
         }
         else{
             document.getElementById("myStringAtProperty").innerHTML =
@@ -73,7 +73,7 @@ function print_StringAt(){
     }
     else{
         document.getElementById("myStringAtProperty").innerHTML =
-        `No position found`;
+        `Invalid position(s)`;
     }
 
 }
