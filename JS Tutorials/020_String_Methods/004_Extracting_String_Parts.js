@@ -218,7 +218,8 @@ function print_substr_negative() {
     let startPosition = document.getElementById("enteredString_substr_negative_StartPos").valueAsNumber;
 
     if (startPosition <= (inputString.length + 1) &&
-        (startPosition >= (1 - (inputString.length)))) {
+        (startPosition >= (1 - (inputString.length + 1))) &&
+        (startPosition != 0)){
 
         document.getElementById("myString_substr_negative").innerHTML =
             `substr: ` + inputString.substr(startPosition);
