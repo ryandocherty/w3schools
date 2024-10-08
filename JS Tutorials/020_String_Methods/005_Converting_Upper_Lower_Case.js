@@ -8,57 +8,50 @@ let stringToUpperCase = stringExample1.toUpperCase();
 let stringToLowerCase = stringExample1.toLowerCase();
 
 
+
+document.getElementById("button_toUpperCase").addEventListener("click", print_toUpperCase);
+document.getElementById("button_toLowerCase").addEventListener("click", print_toLowerCase);
+
 function print_toUpperCase() {
+    let inputString = document.getElementById("enteredString_toCase").value.trim();
+    if (validateInputString()) {
+        document.getElementById("myString__toCase").innerHTML =
+        inputString.toUpperCase();
+    }
+}
 
-    let inputString = document.getElementById("enteredString_toUpperCase").value;
-    let trimmedInputString = inputString.trim();
+function print_toLowerCase() {
+    let inputString = document.getElementById("enteredString_toCase").value.trim();
+    if (validateInputString()) {
+        document.getElementById("myString__toCase").innerHTML =
+        inputString.toLowerCase();
+    }
+}
 
-    //create a RegEx for special characters and numbers
-    //symbols - /[!@#$%^&*()\-+={}[\]:;"'<>,.?\/|\\]/
-    //numbers - /\d/
-    const regexSymbols = /[!@#$£%^&*()\-+={}[\]:;"'<>,.?\/|\\\d/]/;      
+
+function validateInputString() {
+    let inputString = document.getElementById("enteredString_toCase").value.trim();
+
+    //create a RegEx for special characters and numbers:
+    //  symbols - /[!@#$%^&*()\-+={}[\]:;"'<>,.?\/|\\]/
+    //  numbers - /\d/
+    const regexSymbols = /[!@#$£%^&*()\-+={}[\]:;"'<>,.?\/|\\\d/]/;
 
     //use trim() to remove any whitespace from either (or both) ends, whilst preserving any whitespace in the middle
     //if it's ONLY whitespace, the resulting string will be 0 characters long,
     //we can then check use the 'length' property to confirm this
-    if (!(trimmedInputString.trim().length === 0)) {
-        //using 2 'if' statements in order to output 2 different error messages
+    if (!(inputString.trim().length === 0)) {
         //confirm string does not contain RegEx symbols or numbers:
-        if (!(regexSymbols.test(trimmedInputString))) {               
-            document.getElementById("myString__toUpperLowerCase").innerHTML =
-            trimmedInputString.toUpperCase();
+        if (!(regexSymbols.test(inputString))) {
+            return true;
         }
-        else{
-            document.getElementById("myString__toUpperLowerCase").innerHTML =
+        else {
+            document.getElementById("myString__toCase").innerHTML =
             `Only letters allowed`;
         }
     }
     else {
-        document.getElementById("myString__toUpperLowerCase").innerHTML =
-            `No characters detected`;
-    }
-}
-    
-
-function print_toLowerCase() {
-    
-    let inputString = document.getElementById("enteredString_toUpperCase").value;
-    let trimmedInputString = inputString.trim();
-
-    const regexSymbols = /[!@#$£%^&*()\-+={}[\]:;"'<>,.?\/|\\\d/]/;
-
-    if (!(trimmedInputString.trim().length === 0)) {
-        if (!(regexSymbols.test(trimmedInputString))) {
-            document.getElementById("myString__toUpperLowerCase").innerHTML =
-            trimmedInputString.toLowerCase();
-        }
-        else{
-            document.getElementById("myString__toUpperLowerCase").innerHTML =
-            `Only letters allowed`;
-        }
-    }
-    else {
-        document.getElementById("myString__toUpperLowerCase").innerHTML =
+        document.getElementById("myString__toCase").innerHTML =
             `No characters detected`;
     }
 }
