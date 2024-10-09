@@ -14,44 +14,44 @@ document.getElementById("button_toLowerCase").addEventListener("click", print_to
 
 function print_toUpperCase() {
     let inputString = document.getElementById("enteredString_toCase").value.trim();
-    if (validateInputString()) {
-        document.getElementById("myString__toCase").innerHTML =
+    //pass inputString into validateInputString() function
+    //validateInputString() then returns inputString if no errors present
+    if (validateInputString(inputString)) {
+        document.getElementById("myString_toCase").innerHTML =
         inputString.toUpperCase();
     }
 }
 
 function print_toLowerCase() {
     let inputString = document.getElementById("enteredString_toCase").value.trim();
-    if (validateInputString()) {
-        document.getElementById("myString__toCase").innerHTML =
+    if (validateInputString(inputString)) {
+        document.getElementById("myString_toCase").innerHTML =
         inputString.toLowerCase();
     }
 }
 
 
-function validateInputString() {
-    let inputString = document.getElementById("enteredString_toCase").value.trim();
+function validateInputString(inputString) {
 
-    //create a RegEx for special characters and numbers:
-    //  symbols - /[!@#$%^&*()\-+={}[\]:;"'<>,.?\/|\\]/
-    //  numbers - /\d/
-    const regexSymbols = /[!@#$£%^&*()\-+={}[\]:;"'<>,.?\/|\\\d/]/;
+    //RegEx to check for no numbers and at least one letter:
+    const regexOnlyLetters = /^(?=.*[a-zA-Z])[^0-9]*$/;
 
     //use trim() to remove any whitespace from either (or both) ends, whilst preserving any whitespace in the middle
     //if it's ONLY whitespace, the resulting string will be 0 characters long,
-    //we can then check use the 'length' property to confirm this
+    //we can then use the 'length' property to confirm this
     if (!(inputString.trim().length === 0)) {
-        //confirm string does not contain RegEx symbols or numbers:
-        if (!(regexSymbols.test(inputString))) {
-            return true;
+        //confirm string does has no numbers and at least one letter:
+        if (regexOnlyLetters.test(inputString)) {
+            return inputString;
         }
         else {
-            document.getElementById("myString__toCase").innerHTML =
-            `Only letters allowed`;
+            document.getElementById("myString_toCase").innerHTML =
+            `String can't contain numbers` + `<br>` + 
+            `and requires at least one letter`;
         }
     }
     else {
-        document.getElementById("myString__toCase").innerHTML =
+        document.getElementById("myString_toCase").innerHTML =
             `No characters detected`;
     }
 }
