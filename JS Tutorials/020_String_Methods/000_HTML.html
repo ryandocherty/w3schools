@@ -296,8 +296,27 @@
     <button type="button" id="button_concatenated">Concatenate strings</button>
     <p id="myString_concatenated" style="color:#74B72E;"></p>
 
+    <h4 style="color:#ECE81A">NOTE:
+        <br>All string methods return a new string.
+        <br>They don't modify the original string.
+        <br>Formally said:
+        <br>Strings are immutable: Strings cannot be changed, only replaced.
+    </h4>
 
+    <br>
+    <hr>
 
+    <h3>JavaScript String trim()</h3>
+    <h4>The <span style="color:#74B72E">trim()</span> method removes whitespace from both sides of a string,
+        <br>whilst preserving any whitespace in the middle:
+    </h4>
+
+    <label for="enteredString_trim">Enter string:</label>
+    <input type="text" id="enteredString_trim" name="enteredString_trim" size="40"><br>
+    <button type="button" id="button_trim">Trim string</button>
+    <pre id="myString_trimmed" style="color:#74B72E;"></pre>
+
+    
 
     <p>&nbsp;</p>
 
@@ -309,6 +328,7 @@
     <script src="004_Extracting_String_Parts.js"></script>
     <script src="005_Converting_Upper_Lower_Case.js"></script>
     <script src="006_String_Concat.js"></script>
+    <script src="007_String_Trim.js"></script>
 
 </body>
 

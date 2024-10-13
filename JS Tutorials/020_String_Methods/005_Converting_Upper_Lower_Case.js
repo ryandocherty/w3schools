@@ -49,5 +49,6 @@ function validateStringToCase(inputString) {
     }
 }
 
+//event listeners:
 document.getElementById("button_toUpperCase").addEventListener("click", print_toUpperCase);
 document.getElementById("button_toLowerCase").addEventListener("click", print_toLowerCase);

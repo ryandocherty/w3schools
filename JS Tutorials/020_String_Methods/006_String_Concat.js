@@ -11,8 +11,12 @@ let text3Concat = text1Concat.concat(" ", text2Concat);
 
 let text4Concat = "Hello" + " " + "There";
 
+//NOTE:
+//All string methods return a new string. They don't modify the original string.
+//Formally said: Strings are immutable: Strings cannot be changed, only replaced.
 
-//IDEA - maybe try conct with 3+ entered strings?
+
+
 function print_StringConcatenated(){
 
     let inputString_1st = document.getElementById("enteredString1_concat").value.trim();
@@ -29,6 +33,9 @@ function validateStringConcat(inputString_1st, inputString_2nd) {
     //RegEx to check for no numbers and at least one letter:
     const regexOnlyLetters = /^(?=.*[a-zA-Z])[^0-9]*$/;
 
+    //Checking the 2 entered strings individually:
+    //I originally combined both strings and just checked that one,
+    //but this allowed 1 string to be empty or just contain symbols
     if ((!(inputString_1st.trim().length === 0)) &&
         (!(inputString_2nd.trim().length === 0)) &&
         (regexOnlyLetters.test(inputString_1st)) &&
