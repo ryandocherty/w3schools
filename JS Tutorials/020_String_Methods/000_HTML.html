@@ -48,7 +48,7 @@
 
     <input type="text" id="enteredStringInput" name="enteredStringInput" size="40">
     <button type="button" onclick="print_EnteredStringLength()">Print string length</button>
-    <p id="myStringLengthProperty" style="color:#74B72E;"></p>
+    <pre id="myStringLengthProperty" style="color:#74B72E;"></pre>
 
 
     <p>&nbsp;</p>
@@ -76,7 +76,7 @@
     <label for="enteredStringInputCharAtPosition">Enter position:</label>
     <input type="number" min="1" id="enteredStringInputCharAtPosition" name="enteredStringInputCharAtPosition"><br>
     <button type="button" onclick="print_StringCharAt()">Print string position</button>
-    <p id="myStringCharAtProperty" style="color:#74B72E;"></p>
+    <pre id="myStringCharAtProperty" style="color:#74B72E;"></pre>
 
     <br>
 
@@ -90,7 +90,7 @@
     <label for="enteredStringInputCharCodeAt">Enter character:</label>
     <input type="text" maxlength="1" id="enteredStringInputCharCodeAt" name="enteredStringInputCharCodeAt" size="2"><br>
     <button type="button" onclick="print_StringCharCodeAt()">Print character UTF-16 code</button>
-    <p id="myStringCharCodeAtProperty" style="color:#74B72E;"></p>
+    <pre id="myStringCharCodeAtProperty" style="color:#74B72E;"></pre>
 
     <br>
 
@@ -102,7 +102,7 @@
     <label for="enteredStringInputAtPosition">Enter position:</label>
     <input type="number" min="1" id="enteredStringInputAtPosition" name="enteredStringInputAtPosition"><br>
     <button type="button" onclick="print_StringAt()">Print string position</button>
-    <p id="myStringAtProperty" style="color:#74B72E;"></p>
+    <pre id="myStringAtProperty" style="color:#74B72E;"></pre>
 
     <h4>The <span style="color:#74B72E">at()</span>method returns the character at a specified index (position) in a
         string.
@@ -162,7 +162,7 @@
     <label for="enteredStringInputSliceEndPos">Enter end slice position:</label>
     <input type="number" min="1" id="enteredStringInputSliceEndPos" name="enteredStringInputSliceEndPos"><br>
     <button type="button" onclick="print_StringSlice()">Print sliced string</button>
-    <p id="myStringSliced" style="color:#74B72E;"></p>
+    <pre id="myStringSliced" style="color:#74B72E;"></pre>
 
     <h4 style="color:#ECE81A">NOTE:
         <br>JavaScript counts positions from zero.
@@ -180,7 +180,7 @@
     <input type="number" min="1" id="enteredStringSliceStartPos_OmitSecondParam"
         name="enteredStringSliceStartPos_OmitSecondParam"><br>
     <button type="button" onclick="print_StringSlice_OmitSecondParameter()">Print sliced string</button>
-    <p id="myStringSliced_OmitSecondParam" style="color:#74B72E;"></p>
+    <pre id="myStringSliced_OmitSecondParam" style="color:#74B72E;"></pre>
 
     <h4>If a parameter is negative, the position is counted from the end of the string:</h4>
 
@@ -190,7 +190,7 @@
     <input type="number" max="-1" id="enteredStringSliceStartPos_NegativeParam"
         name="enteredStringSliceStartPos_NegativeParam"><br>
     <button type="button" onclick="print_StringSlice_NegativeParameter()">Print sliced string</button>
-    <p id="myStringSliced_NegativeParam" style="color:#74B72E;"></p>
+    <pre id="myStringSliced_NegativeParam" style="color:#74B72E;"></pre>
 
     <h4>This example slices out a portion of a string with two negative positions:</h4>
 
@@ -203,7 +203,7 @@
     <input type="number" max="-1" id="enteredStringSliceEndPos_BothNegative"
         name="enteredStringSliceEndPos_BothNegative"><br>
     <button type="button" onclick="print_StringSlice_BothNegative()">Print sliced string</button>
-    <p id="myStringSliced_BothNegative" style="color:#74B72E;"></p>
+    <pre id="myStringSliced_BothNegative" style="color:#74B72E;"></pre>
 
     <br>
 
@@ -220,7 +220,7 @@
     <label for="enteredString_Substring_EndPos">Enter end position:</label>
     <input type="number" id="enteredString_Substring_EndPos" name="enteredString_Substring_EndPos""><br>
     <button type=" button" onclick="print_StringSubstring()">Print sliced string</button>
-    <p id="myString_Substring" style="color:#74B72E;"></p>
+    <pre id="myString_Substring" style="color:#74B72E;"></pre>
 
     <h4>If you omit the second parameter, the method will slice out the rest of the string:</h4>
 
@@ -230,7 +230,7 @@
     <input type="number" min="1" id="enteredSubstringStartPos_OmitSecondParam"
         name="enteredSubstringStartPos_OmitSecondParam"><br>
     <button type="button" onclick="print_Substring_Omit2ndParam()">Print sliced string</button>
-    <p id="mySubstring_OmitSecondParam" style="color:#74B72E;"></p>
+    <pre id="mySubstring_OmitSecondParam" style="color:#74B72E;"></pre>
 
     <br>
 
@@ -247,7 +247,7 @@
     <label for="enteredString_substr_LengthPos">Enter length position:</label>
     <input type="number" id="enteredString_substr_LengthPos" name="enteredString_substr_LengthPos"><br>
     <button type="button" onclick="print_substr()">Print substr</button>
-    <p id="myString_substr" style="color:#74B72E;"></p>
+    <pre id="myString_substr" style="color:#74B72E;"></pre>
 
     <h4>If you omit the second parameter, <span style="color:#74B72E">substr()</span> will slice out the rest of the
         string:</h4>
@@ -258,7 +258,7 @@
     <input type="number" min="1" id="enteredsubstrStartPos_OmitSecondParam"
         name="enteredsubstrStartPos_OmitSecondParam"><br>
     <button type="button" onclick="print_substr_Omit2ndParam()">Print substr</button>
-    <p id="mysubstr_OmitSecondParam" style="color:#74B72E;"></p>
+    <pre id="mysubstr_OmitSecondParam" style="color:#74B72E;"></pre>
 
     <h4>If the first parameter is negative, the position counts from the end of the string:</h4>
 
@@ -267,7 +267,7 @@
     <label for="enteredString_substr_negative_StartPos">Enter start position:</label>
     <input type="number" id="enteredString_substr_negative_StartPos" name="enteredString_substr_negative_StartPos"><br>
     <button type="button" onclick="print_substr_negative()">Print substr</button>
-    <p id="myString_substr_negative" style="color:#74B72E;"></p>
+    <pre id="myString_substr_negative" style="color:#74B72E;"></pre>
 
     <br>
     <hr>
@@ -281,7 +281,7 @@
     <input type="text" id="enteredString_toCase" name="enteredString_toCase" size="40"><br>
     <button type="button" id="button_toUpperCase">Print upper case</button>
     <button type="button" id="button_toLowerCase">Print lower case</button>
-    <p id="myString_toCase" style="color:#74B72E;"></p>
+    <pre id="myString_toCase" style="color:#74B72E;"></pre>
 
     <br>
     <hr>
@@ -294,7 +294,7 @@
     <label for="enteredString2_concat">Enter 2nd string:</label>
     <input type="text" id="enteredString2_concat" name="enteredString2_concat" size="40"><br>
     <button type="button" id="button_concatenated">Concatenate strings</button>
-    <p id="myString_concatenated" style="color:#74B72E;"></p>
+    <pre id="myString_concatenated" style="color:#74B72E;"></pre>
 
     <h4 style="color:#ECE81A">NOTE:
         <br>All string methods return a new string.
@@ -316,11 +316,34 @@
     <button type="button" id="button_trim">Trim string</button>
     <pre id="myString_trimmed" style="color:#74B72E;"></pre>
 
-    
+    <br>
 
-    <p>&nbsp;</p>
+    <h3>JavaScript String trimStart()</h3>
+    <h4>ECMAScript 2019 added the string method <span style="color:#74B72E">trimStart()</span> to Javascript
+        <br>The <span style="color:#74B72E">trimStart()</span> method works like 
+        <span style="color:#74B72E">trim()</span>, but removes whitespace only from the start of a string.
+    </h4>
 
-    <p>&nbsp;</p>
+    <label for="enteredString_trimStart">Enter string:</label>
+    <input type="text" id="enteredString_trimStart" name="enteredString_trimStart" size="40"><br>
+    <button type="button" id="button_trimStart">Trim string</button>
+    <pre id="myString_trimStart" style="color:#74B72E;"></pre>
+
+    <br>
+
+    <h3>JavaScript String trimEnd()</h3>
+    <h4>ECMAScript 2019 added the string method <span style="color:#74B72E">trimEnd()</span> to Javascript
+        <br>The <span style="color:#74B72E">trimEnd()</span> method works like 
+        <span style="color:#74B72E">trim()</span>, but removes whitespace only from the end of a string.
+    </h4>
+
+    <label for="enteredString_trimEnd">Enter string:</label>
+    <input type="text" id="enteredString_trimEnd" name="enteredString_trimEnd" size="40"><br>
+    <button type="button" id="button_trimEnd">Trim string</button>
+    <pre id="myString_trimEnd" style="color:#74B72E;"></pre>
+
+
+    <br>
 
     <!--------------------Scripts-------------------->
     <script src="001_Basic_String_Methods.js"></script>

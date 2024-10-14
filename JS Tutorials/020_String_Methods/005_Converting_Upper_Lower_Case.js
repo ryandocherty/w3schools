@@ -21,6 +21,7 @@ function print_toUpperCase() {
 
 function print_toLowerCase() {
     let inputString = document.getElementById("enteredString_toCase").value.trim();
+
     if (validateStringToCase(inputString)) {
         document.getElementById("myString_toCase").innerHTML =
         inputString.toLowerCase();
