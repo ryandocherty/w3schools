@@ -308,7 +308,7 @@
 
     <h3>JavaScript String trim()</h3>
     <h4>The <span style="color:#74B72E">trim()</span> method removes whitespace from both sides of a string,
-        <br>whilst preserving any whitespace in the middle:
+        <br>while preserving any whitespace in the middle:
     </h4>
 
     <label for="enteredString_trim">Enter string:</label>
@@ -342,8 +342,48 @@
     <button type="button" id="button_trimEnd">Trim string</button>
     <pre id="myString_trimEnd" style="color:#74B72E;"></pre>
 
+    <br>
+    <hr>
+
+    <h2>JavaScript String Padding</h2>
+    <h4>ECMAScript 2017 added two new string methods to JavaScript: 
+        <span style="color:#74B72E">padStart()</span> and 
+        <span style="color:#74B72E">padEnd()</span>
+        <br>to support padding at the beginning and at the end of a string.</br>
+        
+    </h4>
 
     <br>
+
+    <h3>JavaScript String padStart()</h3>
+    <h4>The <span style="color:#74B72E">padStart()</span> method pads a string from the start.
+        <br>It pads a string with another string (multiple times) until it reaches a given length.
+    </h4>
+
+    <h3>JavaScript String padEnd()</h3>
+    <h4>The <span style="color:#74B72E">padEnd()</span> method pads a string from the end.
+        <br>It pads a string with another string (multiple times) until it reaches a given length.
+    </h4>
+
+    <label for="enteredString_initialPaddingString">Enter string:</label>
+    <input type="text" id="enteredString_initialPaddingString" size="40"><br>
+    <label for="enteredString_paddingString">Enter padding string:</label>
+    <input type="text" id="enteredString_paddingString" size="31"><br>
+    <label for="enteredString_paddingLength">Enter padding length:</label>
+    <input type="number" id="enteredString_paddingLength" size="10"><br>
+    <button type="button" id="button_padStart">Pad string start</button>
+    <button type="button" id="button_padEnd">Pad string end</button>
+    <pre id="myString_padded" style="color:#74B72E;"></pre>
+
+    <h4 style="color:#ECE81A">NOTE:
+        <br>The padStart() and padEnd() methods are string methods.
+        <br>To pad a number, convert the number to a string first.
+    </h4>
+
+
+    <br>
+    <hr>
+
 
     <!--------------------Scripts-------------------->
     <script src="001_Basic_String_Methods.js"></script>
@@ -352,6 +392,7 @@
     <script src="005_Converting_Upper_Lower_Case.js"></script>
     <script src="006_String_Concat.js"></script>
     <script src="007_String_Trim.js"></script>
+    <script src="008_String_Padding.js"></script>
 
 </body>
 

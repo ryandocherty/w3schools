@@ -8,7 +8,7 @@ let stringTrimmed = stringToBeTrimmed.trim();
 
 
 
-function print_StringTrimmed() {
+function print_StringTrimmed(){
 
     let inputString = document.getElementById("enteredString_trim").value;
 
@@ -44,8 +44,8 @@ function print_StringTrimStart(){
     }
     else {
         document.getElementById("myString_trimStart").innerHTML =
-            `String cannot be empty and requires` + `<br>` +
-            `whitespace at the beginning`;
+            `String cannot be empty and` + `<br>` +
+            `requires whitespace at the beginning`;
     }
 
 }
@@ -68,8 +68,8 @@ function print_StringTrimEnd(){
     }
     else {
         document.getElementById("myString_trimEnd").innerHTML =
-            `String cannot be empty and requires` + `<br>` +
-            `whitespace at the end`;
+            `String cannot be empty and` + `<br>` +
+            `requires whitespace at the end`;
     }
 
 }
