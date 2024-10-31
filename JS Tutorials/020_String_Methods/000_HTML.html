@@ -377,13 +377,30 @@
 
     <h4 style="color:#ECE81A">NOTE:
         <br>The padStart() and padEnd() methods are string methods.
-        <br>To pad a number, convert the number to a string first.
+        <br>To pad a number, convert the number to a string first
+        <br>by using enteredNumber.toString()
     </h4>
-
 
     <br>
     <hr>
 
+    <h3>JavaScript String repeat()</h3>
+    <h4>The <span style="color:#74B72E">repeat()</span> method returns a string with a number of copies of a string.
+        <br>The <span style="color:#74B72E">repeat()</span> method returns a new string.
+        <br>The <span style="color:#74B72E">repeat()</span> method does not change the original string.
+    </h4>
+
+    <label for="enteredString_repeat">Enter string:</label>
+    <input type="text" id="enteredString_repeat" size="40"><br>
+    <label for="enteredString_repeatAmount">Enter repeat amount:</label>
+    <input type="number" id="enteredString_repeatAmount" size="10"><br>
+    <button type="button" id="button_repeat">Repeat string</button>
+    <pre id="myString_repeated" style="color:#74B72E;"></pre>
+
+
+    <br>
+    <hr>
+    
 
     <!--------------------Scripts-------------------->
     <script src="001_Basic_String_Methods.js"></script>
@@ -393,6 +410,7 @@
     <script src="006_String_Concat.js"></script>
     <script src="007_String_Trim.js"></script>
     <script src="008_String_Padding.js"></script>
+    <script src="009_String_Repeat.js"></script>
 
 </body>
 
