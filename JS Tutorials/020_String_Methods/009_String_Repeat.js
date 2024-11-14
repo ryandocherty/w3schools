@@ -17,16 +17,21 @@ function print_StringRepeat(){
     }
 }
 
-function validateString_Repeat(inputString, repeatAmount) {
+function validateString_Repeat(x, y) {
 
-    if (!(inputString.trim().length === 0)) {
-        if ((!(isNaN(repeatAmount))) && (repeatAmount > 0)){
-            return true;
+    if (!(x.trim().length === 0)) {
+        if (!(isNaN(y))) {
+            if (y > 0) {
+                return true;
+            }
+            else{
+                document.getElementById("myString_repeated").innerHTML =
+                `Repeat amount must be greater than zero.`
+            }
         }
         else {
             document.getElementById("myString_repeated").innerHTML =
-                `Repeat amount must be numerical` + `<br>` +
-                `and greater than zero.`
+                `Repeat amount must be numerical`
         }
     }
     else {

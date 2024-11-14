@@ -397,9 +397,30 @@
     <button type="button" id="button_repeat">Repeat string</button>
     <pre id="myString_repeated" style="color:#74B72E;"></pre>
 
-
     <br>
     <hr>
+
+    <h2>Replacing String Content</h2>
+    <h4>The <span style="color:#74B72E">replace()</span> method replaces a specified value with another value in a string:</h4>
+
+    <label for="enteredString_replace_initial">Enter starting string:</label>
+    <input type="text" id="enteredString_replace_initial" size="40"><br>
+    <label for="enteredString_replace_1stParam">Enter part to replace:</label>
+    <input type="text" id="enteredString_replace_1stParam" size="40"><br>
+    <label for="enteredString_replace_2ndParam">Enter replacement string:</label>
+    <input type="text" id="enteredString_replace_2ndParam" size="35"><br>
+    <button type="button" id="button_replace">Repeat string</button>
+    <pre id="myString_replaced" style="color:#74B72E;"></pre>
+
+
+    <h4 style="color:#ECE81A">NOTE:
+        <br>The replace() method does not change the string it is called on.
+        <br>The replace() method returns a new string.
+        <br>The replace() method replaces <span style="color:#FF0000">only the first</span> match
+        <br>If you want to replace all matches, use a regular expression with the /g flag set. 
+        <br>See examples below.
+    </h4>
+
     
 
     <!--------------------Scripts-------------------->
@@ -411,6 +432,7 @@
     <script src="007_String_Trim.js"></script>
     <script src="008_String_Padding.js"></script>
     <script src="009_String_Repeat.js"></script>
+    <script src="010_Replacing_String_Content.js"></script>
 
 </body>
 
