@@ -21,18 +21,24 @@ function print_StringReplace(){
 }
 
 //output custom error if no match is found
-function validateString_Replace(initialString, partToReplace, replacementString) {
+function validateString_Replace(input1, input2, input3) {
 
-    if ((!(initialString.trim().length === 0)) && 
-        (!(partToReplace.trim().length === 0)) &&
-        (!(replacementString.trim().length === 0))){
-            return true; 
-    }
-    else{
+    if (((input1.trim().length === 0)) ||
+        ((input2.trim().length === 0)) ||
+        ((input3.trim().length === 0))) {
+
         document.getElementById("myString_replaced").innerHTML =
         `All input boxes require text.`
+        return false;
     }
-
+    else if (!(input1.includes(input2))) {
+        document.getElementById("myString_replaced").innerHTML =
+        `No match found.`
+        return false;
+    }
+    else{
+        return true;
+    }
 }
 
 
