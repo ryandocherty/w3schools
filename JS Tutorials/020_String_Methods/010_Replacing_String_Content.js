@@ -4,7 +4,7 @@
 //The replace() method does not change the string it is called on.
 //The replace() method returns a new string.
 //The replace() method replaces ONLY THE FIRST match
-//If you want to replace all matches, use a regular expression with the /g flag set.
+//If you want to replace all matches, use a regular expression with the /g flag set
 
 function print_StringReplace(){
 
@@ -20,7 +20,7 @@ function print_StringReplace(){
 
 }
 
-//output custom error if no match is found
+
 function validateString_Replace(input1, input2, input3) {
 
     if (((input1.trim().length === 0)) ||

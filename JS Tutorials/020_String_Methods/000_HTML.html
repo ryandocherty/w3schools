@@ -412,7 +412,6 @@
     <button type="button" id="button_replace">Replace string</button>
     <pre id="myString_replaced" style="color:#74B72E;"></pre>
 
-
     <h4 style="color:#ECE81A">NOTE:
         <br>The replace() method does not change the string it is called on.
         <br>The replace() method returns a new string.
@@ -421,11 +420,32 @@
         <br>See examples below.
     </h4>
 
-    
+    <h4>Using RegEx with a <span style="color:#74B72E">/g</span> flag:</h4>
 
-    
+    <label for="enteredString_replace_initial_RegEx_gFlag">Enter starting string:</label>
+    <input type="text" id="enteredString_replace_initial_RegEx_gFlag" size="40"><br>
+    <label for="enteredString_replace_1stParam_RegEx_gFlag">Enter part to replace:</label>
+    <input type="text" id="enteredString_replace_1stParam_RegEx_gFlag" size="40"><br>
+    <label for="enteredString_replace_2ndParam_RegEx_gFlag">Enter replacement string:</label>
+    <input type="text" id="enteredString_replace_2ndParam_RegEx_gFlag" size="35"><br>
+    <button type="button" id="button_replace_RegEx_gFlag">Replace string</button>
+    <pre id="myString_replaced_RegEx_gFlag" style="color:#74B72E;"></pre>
 
+    <h4 style="color:#ECE81A">NOTE:
+        <br>By default, the replace() method is case sensitive.
+        <br>To replace case insensitive, use a regular expression with an /i flag (insensitive):
+    </h4>
 
+    <h4>Using RegEx with a <span style="color:#74B72E">/i</span> flag:</h4>
+
+    <label for="enteredString_replace_initial_RegEx_iFlag">Enter starting string:</label>
+    <input type="text" id="enteredString_replace_initial_RegEx_iFlag" size="40"><br>
+    <label for="enteredString_replace_1stParam_RegEx_iFlag">Enter part to replace:</label>
+    <input type="text" id="enteredString_replace_1stParam_RegEx_iFlag" size="40"><br>
+    <label for="enteredString_replace_2ndParam_RegEx_iFlag">Enter replacement string:</label>
+    <input type="text" id="enteredString_replace_2ndParam_RegEx_iFlag" size="35"><br>
+    <button type="button" id="button_replace_RegEx_iFlag">Replace string</button>
+    <pre id="myString_replaced_RegEx_iFlag" style="color:#74B72E;"></pre>
 
 
     <br>
@@ -441,6 +461,7 @@
     <script src="008_String_Padding.js"></script>
     <script src="009_String_Repeat.js"></script>
     <script src="010_Replacing_String_Content.js"></script>
+    <script src="011_Replacing_String_Content_RegExp.js"></script>
 
 </body>
 
