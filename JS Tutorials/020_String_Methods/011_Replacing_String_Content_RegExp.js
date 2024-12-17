@@ -64,12 +64,12 @@ function print_StringReplace_RegEx_iFlag(){
     document.getElementById("enteredString_replace_2ndParam_RegEx_iFlag").value;
 
     //conversion from a string to RegExp:
+    //can use /gi to do both replace all + case insensitive
     const regex = new RegExp(partToReplace, 'i');
 
     if (validateString_Replace_RegEx_iFlag(initialString, partToReplace, replacementString)){
 
-        //The /i flag replaces all matches, 
-        //instead of just the first match:
+        //The /i flag ignores case (case insensitive):
         document.getElementById("myString_replaced_RegEx_iFlag").innerHTML =
         initialString.replace(regex, replacementString);
     }
@@ -86,7 +86,9 @@ function validateString_Replace_RegEx_iFlag(input1, input2, input3) {
         `All input boxes require text.`
         return false;
     }
-    else if (!(input1.includes(input2))) {
+    //includes() is case sensitive,
+    //use toLowerCase() on both strings to circumvent this:
+    else if (!(input1.toLowerCase().includes(input2.toLowerCase()))) {
         document.getElementById("myString_replaced_RegEx_iFlag").innerHTML =
         `No match found.`
         return false;
@@ -97,6 +99,6 @@ function validateString_Replace_RegEx_iFlag(input1, input2, input3) {
 }
 
 
-
+//Event listeners:
 document.getElementById("button_replace_RegEx_gFlag").addEventListener("click", print_StringReplace_RegEx_gFlag);
 document.getElementById("button_replace_RegEx_iFlag").addEventListener("click", print_StringReplace_RegEx_iFlag);
