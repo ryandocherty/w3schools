@@ -20,36 +20,17 @@ function print_StringReplace_RegEx_gFlag(){
     //conversion from a string to RegExp:
     const regex = new RegExp(partToReplace, 'g');
 
-    if (validateString_Replace_RegEx_gFlag(initialString, partToReplace, replacementString)){
+    const errorMessage = validateString_Replace(initialString, partToReplace, replacementString);
 
-        //The /g flag replaces all matches, 
-        //instead of just the first match:
+    if (errorMessage){
+        document.getElementById("myString_replaced_RegEx_gFlag").innerHTML = errorMessage;
+    }
+    else{
         document.getElementById("myString_replaced_RegEx_gFlag").innerHTML =
         initialString.replace(regex, replacementString);
     }
 
 }
-
-function validateString_Replace_RegEx_gFlag(input1, input2, input3) {
-
-    if (((input1.trim().length === 0)) ||
-        ((input2.trim().length === 0)) ||
-        ((input3.trim().length === 0))) {
-
-        document.getElementById("myString_replaced_RegEx_gFlag").innerHTML =
-        `All input boxes require text.`
-        return false;
-    }
-    else if (!(input1.includes(input2))) {
-        document.getElementById("myString_replaced_RegEx_gFlag").innerHTML =
-        `No match found.`
-        return false;
-    }
-    else{
-        return true;
-    }
-}
-
 
 //By default, the replace() method is case sensitive
 //To replace case insensitive, use a regular expression with an /i flag (insensitive):
@@ -67,34 +48,47 @@ function print_StringReplace_RegEx_iFlag(){
     //can use /gi to do both replace all + case insensitive
     const regex = new RegExp(partToReplace, 'i');
 
-    if (validateString_Replace_RegEx_iFlag(initialString, partToReplace, replacementString)){
+    //the validateString() function returns specific error messages (or null)
+    const errorMessage = validateString_Replace(initialString, partToReplace, replacementString);
 
+    if (errorMessage){
+        document.getElementById("myString_replaced_RegEx_iFlag").innerHTML = errorMessage;
+    }
+    else{
         //The /i flag ignores case (case insensitive):
         document.getElementById("myString_replaced_RegEx_iFlag").innerHTML =
         initialString.replace(regex, replacementString);
     }
-
 }
 
-function validateString_Replace_RegEx_iFlag(input1, input2, input3) {
+
+function validateString_Replace(input1, input2, input3) {
 
     if (((input1.trim().length === 0)) ||
         ((input2.trim().length === 0)) ||
         ((input3.trim().length === 0))) {
 
-        document.getElementById("myString_replaced_RegEx_iFlag").innerHTML =
-        `All input boxes require text.`
-        return false;
+        return `All input boxes require text.`;
     }
-    //includes() is case sensitive,
+
+    //includes() method is case sensitive,
     //use toLowerCase() on both strings to circumvent this:
     else if (!(input1.toLowerCase().includes(input2.toLowerCase()))) {
-        document.getElementById("myString_replaced_RegEx_iFlag").innerHTML =
-        `No match found.`
-        return false;
+
+        return `No match found.`;
     }
     else{
-        return true;
+        //why return "null" instead of "true" here:
+        //in the print() function above, it's stated "if (errorMessage)"
+        //returning true here would be saying that "it's true that an error message was returned"
+        //but instead I'm stating that errorMessage == null
+        return null;
+        //also why return "null" instead of "false" here:
+        //when returning null from the validateString() function, 
+        //it indicates that there are no errors found during the validation process. 
+        //it signifies the absence of an error message.
+        //returning false here might imply that something went wrong or that the validation check failed,
+        //but this doesn't really convey the idea of "no error" as clearly as null
     }
 }
 
