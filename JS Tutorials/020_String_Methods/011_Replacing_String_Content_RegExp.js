@@ -20,6 +20,9 @@ function print_StringReplace_RegEx_gFlag(){
     //conversion from a string to RegExp:
     const regex = new RegExp(partToReplace, 'g');
 
+    //storing the return value of the validateString() function as a variable
+    //if it returns null, it fails the 'if' check below, 
+    //which signifies the absence of an error message:
     const errorMessage = validateString_Replace(initialString, partToReplace, replacementString);
 
     if (errorMessage){
@@ -45,10 +48,9 @@ function print_StringReplace_RegEx_iFlag(){
     document.getElementById("enteredString_replace_2ndParam_RegEx_iFlag").value;
 
     //conversion from a string to RegExp:
-    //can use /gi to do both replace all + case insensitive
+    //can use "gi" to do both replace all + case insensitive
     const regex = new RegExp(partToReplace, 'i');
 
-    //the validateString() function returns specific error messages (or null)
     const errorMessage = validateString_Replace(initialString, partToReplace, replacementString);
 
     if (errorMessage){
